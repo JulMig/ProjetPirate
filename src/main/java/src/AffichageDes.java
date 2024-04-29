@@ -31,7 +31,11 @@ public class AffichageDes extends javax.swing.JPanel {
         try {
             for (int i = 0; i < 6; i++) {
                 String n = i+1 + "";
-                images[i] = ImageIO.read(new File("Z:\\Projet Pirate\\ProjetPirate\\src\\main\\java\\images\\" + n +".PNG"));
+                //images[i] = ImageIO.read(new File("C:\\Users\\ASUS\\Desktop\\Document_Fac\\L3\\projet pirate\\ProjetPirate\\src\\main\\resources\\" + n +".PNG"));
+                String path = getClass().getResource(n +".PNG") + "";
+                System.out.println(n +".PNG" + " : " + path);
+                images[i] = ImageIO.read(new File(path));
+
                 timer = new Timer(100, (ActionEvent e) -> {
                     if (currentIndex < images.length) {
                         imageAAfficher = images[currentIndex];
@@ -41,7 +45,6 @@ public class AffichageDes extends javax.swing.JPanel {
                     }
                 });
             }
-
         } catch (IOException ex) {
             System.out.println("Erreur du chargement de l'image");
         }
@@ -59,6 +62,7 @@ public class AffichageDes extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
 
         jButton1.setText("jButton1");
+        jButton1.setAlignmentY(0.0F);
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton1MouseClicked(evt);
@@ -77,9 +81,9 @@ public class AffichageDes extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(237, Short.MAX_VALUE)
+                .addContainerGap(240, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addGap(41, 41, 41))
+                .addGap(38, 38, 38))
         );
     }// </editor-fold>//GEN-END:initComponents
 
