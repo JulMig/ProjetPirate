@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.Random;
 import javax.imageio.ImageIO;
 import javax.swing.Timer;
 
@@ -23,26 +24,35 @@ public class AffichageDes extends javax.swing.JPanel {
      * Creates new form Des
      */
     BufferedImage[] images = new BufferedImage[6];
-    BufferedImage imageAAfficher;
+    BufferedImage imageAAfficherD1;
+    BufferedImage imageAAfficherD2;
     Timer timer;
+    int compteur = 0;
+    int limite = 20;
     int currentIndex = 0;
+    int nbAAfficherD1 = 0;
+    int nbAAfficherD2 = 0;
     public AffichageDes() {
         initComponents();
         try {
             for (int i = 0; i < 6; i++) {
                 String n = i+1 + "";
-                //images[i] = ImageIO.read(new File("C:\\Users\\ASUS\\Desktop\\Document_Fac\\L3\\projet pirate\\ProjetPirate\\src\\main\\resources\\" + n +".PNG"));
-                String path = getClass().getResource(n +".PNG") + "";
-                System.out.println(n +".PNG" + " : " + path);
+                String path = getClass().getResource("/"+n +".PNG").getPath();
+                
                 images[i] = ImageIO.read(new File(path));
 
-                timer = new Timer(100, (ActionEvent e) -> {
-                    if (currentIndex < images.length) {
-                        imageAAfficher = images[currentIndex];
-                        System.out.println("image chargée");
+                timer = new Timer(50, (ActionEvent e) -> {
+                    imageAAfficherD1 = images[new Random().nextInt(6)];
+                    imageAAfficherD2 = images[new Random().nextInt(6)];
+                    repaint();
+                    compteur++;
+                    if(compteur > limite){
+                        timer.stop();
+                        imageAAfficherD1 = images[nbAAfficherD1];
+                        imageAAfficherD2 = images[nbAAfficherD2];
                         repaint();
-                        currentIndex++;
                     }
+                    
                 });
             }
         } catch (IOException ex) {
@@ -88,22 +98,22 @@ public class AffichageDes extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        Afficher();
+        Afficher(5, 2);
     }//GEN-LAST:event_jButton1MouseClicked
-
-    
-    
-    void Afficher(){
+  
+    void Afficher(int nbD1, int nbD2){
+        compteur = 0;
+        nbAAfficherD1 = nbD1-1;
+        nbAAfficherD2 = nbD2-1;
         timer.start();
     }    
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         
-        if (imageAAfficher != null) {
-            g.drawImage(imageAAfficher, 0, 0, this);
-            System.out.println("image affichée");
-
+        if (imageAAfficherD1 != null && imageAAfficherD2 != null) {
+            g.drawImage(imageAAfficherD1, 0, 0, this);
+            g.drawImage(imageAAfficherD2, 150, 0, this);
         }
     }
 
