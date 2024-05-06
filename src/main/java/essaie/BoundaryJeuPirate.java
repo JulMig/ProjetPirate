@@ -1,26 +1,23 @@
-package boundary;
-import controller.*;
+package essaie;
 import java.util.Scanner;
+import essaie.ILancerDee;
 
 public class BoundaryJeuPirate implements IBoundary{
-    ILancerDe iLancerDe;
+    private ILancerDee iLancerDe;
     
     Scanner scanner = new Scanner(System.in);
     
 
     @Override
-    public void setILancerDe(ILancerDe iLancerDe) {
+    public void setILancerDe(ILancerDee iLancerDe) {
         this.iLancerDe = iLancerDe;
     }
     
     @Override
     public int lancerDe(){
-        int rep;
-        
-        do {
-            System.out.println("Voulez vous lancer le de ?\n1.oui");
-            rep = scanner.nextInt();
-        } while(rep != 1);
+
+        System.out.println("Voulez vous lancer le de ?");
+        scanner.next();
         
         int val1 = iLancerDe.getAleaDeVal();
         int val2 = iLancerDe.getAleaDeVal();

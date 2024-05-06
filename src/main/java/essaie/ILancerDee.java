@@ -2,12 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
-package controller;
+package essaie;
 
 /**
  *
- * @author Julie Mignotte
+ * @author julie
  */
-public interface ILancerDe {
+public interface ILancerDee {
+    
+    public int getAleaDeVal();
     
 }

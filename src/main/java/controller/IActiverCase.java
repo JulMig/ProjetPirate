@@ -8,6 +8,6 @@ package controller;
  *
  * @author Julie Mignotte
  */
-public interface ILancerDe {
+public interface IActiverCase {
     
 }
