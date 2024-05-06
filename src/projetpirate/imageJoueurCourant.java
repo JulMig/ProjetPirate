@@ -4,74 +4,42 @@
  */
 package projetpirate;
 
-import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
-import java.awt.Toolkit;
-import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.net.URISyntaxException;
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 
 /**
  *
  * @author isaac
  */
-public class panelHPContainer extends javax.swing.JPanel {
+public class imageJoueurCourant extends javax.swing.JPanel {
     private Image image;
-    ArrayList<String> lstImage = new ArrayList<>();
-    int hp = 5;
+    ArrayList<String> imJoueurs = new ArrayList<>(); 
+    int joueurCourant = 0;
+    
     
     /**
-     * Creates new form panelHPContainer
+     * Creates new form imageJoueurCourant
      */
-    public panelHPContainer(){
-        
-        try {
+    public imageJoueurCourant() {
+         try {
             // Charger l'image originale
-            image = ImageIO.read(new File("../ProjetPirate/src/main/resources/5pv.png"));
-            
-            
-            for(int i = 0;i<=5;i++){
-                lstImage.add("../ProjetPirate/src/main/resources/"+i+"pv.png");
-            }
-            
-            initComponents();
-        } catch (IOException ex) {
-            Logger.getLogger(panelHPContainer.class.getName()).log(Level.SEVERE, null, ex);
-        }
+            image = ImageIO.read(new File("../ProjetPirate/src/main/resources/women_pirate.jpg"));
+         }catch(IOException e){
+             e.printStackTrace();
+         }
+         imJoueurs.add("../ProjetPirate/src/main/resources/women_pirate.jpg");
+         imJoueurs.add("../ProjetPirate/src/main/resources/case.png");
+         
+         
+        initComponents();
     }
     
-    
-    
-    public void setHp(int hp){
-        this.hp=hp;
-    }
-    
-    public String getImage(){
-        return lstImage.get(hp);
-    }
-    
-    public void loseHP() throws IOException{
-        if(hp>0){
-            hp--;
-            setImage(lstImage.get(hp));
-        }
-    }
-    public void addHP() throws IOException{
-        if(hp<lstImage.size()-1){
-            hp++;
-            setImage(lstImage.get(hp));
-        }
-    }
-    
-    
+     
     @Override
     protected void paintComponent(Graphics g){
         super.paintComponent(g);
@@ -85,6 +53,12 @@ public class panelHPContainer extends javax.swing.JPanel {
     
     }
     
+    public void nextJoueur() throws IOException{
+        joueurCourant = (joueurCourant+1)%2;
+        setImage(imJoueurs.get(joueurCourant));
+        
+    }
+    
     public void setImage(String path) throws IOException{
         try {
             // Charger l'image originale
@@ -96,9 +70,7 @@ public class panelHPContainer extends javax.swing.JPanel {
         }
         repaint();
     }
-    
 
-    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
