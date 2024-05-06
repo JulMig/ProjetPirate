@@ -32,20 +32,20 @@ public class panelHPContainer extends javax.swing.JPanel {
      * Creates new form panelHPContainer
      */
     public panelHPContainer(){
+        
         try {
             // Charger l'image originale
             image = ImageIO.read(new File("../ProjetPirate/src/main/resources/5pv.png"));
-
-        } catch (IOException e) {
-            e.printStackTrace();
-            // Gérer l'erreur ou fournir une image de secours
+            
+            
+            for(int i = 0;i<=5;i++){
+                lstImage.add("../ProjetPirate/src/main/resources/"+i+"pv.png");
+            }
+            
+            initComponents();
+        } catch (IOException ex) {
+            Logger.getLogger(panelHPContainer.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        for(int i = 0;i<=5;i++){
-            lstImage.add("../ProjetPirate/src/main/resources/"+i+"pv.png");
-        }
-
-        initComponents();
     }
     
     
