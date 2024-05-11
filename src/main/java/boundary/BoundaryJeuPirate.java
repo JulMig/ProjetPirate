@@ -29,11 +29,26 @@ public class BoundaryJeuPirate implements IBoundary{
         return des[0] + des[1];
     }
 
+    public int deplacerPirate(Joueur joueurCourant, int nbPas){
+        int nbPasFait;
+        
+        do {
+            System.out.println("Sur quelle case allez vous ?");
+            nbPasFait = scanner.nextInt();
+        } while (!iDeplacerPirate.verifierDeplacement(joueurCourant, nbPas, nbPasFait));
+        
+        System.out.println("Deplacement valide");
+        
+        int numCase = iDeplacerPirate.deplacerPirate(joueurCourant, nbPas);
+        
+        return numCase;
+    }
+    
     public void setILancerDe (ILancerDe iLancerDe){
         this.iLancerDe = iLancerDe;
     }
     
-    public void setDeplacerPirate(IDeplacerPirate iDeplacerPirate){
+    public void setIDeplacerPirate(IDeplacerPirate iDeplacerPirate){
         this.iDeplacerPirate = iDeplacerPirate;
     }
     

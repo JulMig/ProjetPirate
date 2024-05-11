@@ -13,9 +13,9 @@ public interface IBoundary {
 	
 	public int lancerDes();
 	
-	public void setDeplacerPirate(IDeplacerPirate iDeplacerPirate);
+	public void setIDeplacerPirate(IDeplacerPirate iDeplacerPirate);
 	
-	
+	public int deplacerPirate(Joueur joueurCourant, int nbPas);
 	
     
 }

@@ -31,6 +31,8 @@ public class ControlJeuPirate {
         boundary.setILancerDe(controlDeplacer);
         int nbPas = boundary.lancerDes();
         
+        boundary.setIDeplacerPirate(controlDeplacer);
+        boundary.deplacerPirate(jeu.getJoueurCourant(), nbPas);
         //numCase = boundary.deplacerJoueur(jeu.getJoueurCourant());
         //activer la case
         //boundary.activerCase(jeu.getCase(numCase));
