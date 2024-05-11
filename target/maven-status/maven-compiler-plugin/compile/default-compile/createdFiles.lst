@@ -1,0 +1,6 @@
+controller\ILancerDe.class
+controller\ControlLancerDe.class
+controller\ControlJeuPirate.class
+boundary\BoundaryJeuPirate.class
+entity\De.class
+boundary\IBoundary.class
