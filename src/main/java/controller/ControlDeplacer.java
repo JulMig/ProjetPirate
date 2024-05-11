@@ -1,11 +1,14 @@
 package controller;
 
+import entity.De;
 import entity.Joueur;
 
 public class ControlDeplacer implements IDeplacerPirate, ILancerDe {
+	
     public int[] LancerDes(){
-        //TODO
-        return null;
+    	
+    	return De.lancerDes(2);
+        
     }
     
     public int deplacerPirate(Joueur joueur){
