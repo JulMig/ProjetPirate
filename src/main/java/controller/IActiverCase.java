@@ -3,11 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
 package controller;
+import entity.*;
 
-/**
- *
- * @author Julie Mignotte
- */
 public interface IActiverCase {
+    public int perdreVie(Joueur j){
+    
+    }
     
 }
