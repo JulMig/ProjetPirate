@@ -9,5 +9,5 @@ package controller;
  * @author Julie Mignotte
  */
 public interface ILancerDe {
-    public int LancerDe();
+    public int[] LancerDes();
 }

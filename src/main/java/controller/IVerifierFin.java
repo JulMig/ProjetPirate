@@ -9,6 +9,6 @@ package controller;
  * @author Julie Mignotte
  */
 public interface IVerifierFin {
-    private boolean verifierFin();
+    public boolean verifierFin();
     
 }
