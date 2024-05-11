@@ -1,13 +1,20 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
- */
+
 package boundary;
 
-/**
- *
- * @author Julie Mignotte
- */
+import entity.Joueur;
+import controller.ILancerDe;
+
 public interface IBoundary {
+	
+	public String afficherJoueur(Joueur joueurCourant);
+	
+	public void setILancerDe (ILancerDe IDeplacerPirate);
+	
+	public int lancerDes();
+	
+	public void setDeplacerPirate(ILancerDe IDeplacerPirate);
+	
+	
+	
     
 }

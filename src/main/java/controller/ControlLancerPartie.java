@@ -4,10 +4,7 @@
  */
 package controller;
 
-/**
- *
- * @author Julie Mignotte
- */
+
 public class ControlLancerPartie {
     
 }
