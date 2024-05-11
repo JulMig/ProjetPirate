@@ -11,11 +11,11 @@ public class ControlDeplacer implements IDeplacerPirate, ILancerDe {
         
     }
     
-    public int deplacerPirate(Joueur joueur){
+    public int deplacerPirate(Joueur joueur, int nbPas){
         //TODO
         return 0;
     }
-    public boolean verifierDeplacement(Joueur joueur){
+    public boolean verifierDeplacement(Joueur joueur, int nbPas, int nbPasFait){
         //TODO
         return true;
     }

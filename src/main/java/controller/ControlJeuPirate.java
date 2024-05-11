@@ -29,7 +29,7 @@ public class ControlJeuPirate {
         boundary.afficherJoueur(jeu.getJoueurCourant());
 
         boundary.setILancerDe(controlDeplacer);
-        boundary.lancerDes();
+        int nbPas = boundary.lancerDes();
         
         //numCase = boundary.deplacerJoueur(jeu.getJoueurCourant());
         //activer la case

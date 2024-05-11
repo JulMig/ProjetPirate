@@ -24,6 +24,8 @@ public class BoundaryJeuPirate implements IBoundary{
         int[] des = iLancerDe.LancerDes();
         
         System.out.println("Vous avez fait " + String.valueOf(des[0]) + " - " + String.valueOf(des[1]));
+        
+        iLancerDe = null;
         return des[0] + des[1];
     }
 
