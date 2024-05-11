@@ -12,17 +12,27 @@ public class Joueur {
     public String getNom() {
         return nom;
     }
+    
+    private int calculerPosition(int nbPas){
+        int newPosition = positionCourante + nbPas;
+        int surplus = newPosition - 30;
+        
+        if (surplus > 0){
+            newPosition = 30 - surplus;
+        }
+        
+        return newPosition;
+    }
+    
     public int deplacerPirate(int nbPas) {
         // Déplacer le pirate en ajoutant le nombre de pas à la position actuelle
-        this.positionCourante += nbPas;
+        this.positionCourante = calculerPosition(nbPas);
         return this.positionCourante; // Retourne la nouvelle position du pirate c'est num case
         
     }
     
     public boolean verifierDeplacement(int nbPas, int nbPasFait){
-        int new_Position = this.positionCourante + nbPasFait;
-           
-        return (new_Position >= 0) && (new_Position <= nbPas);
+        return nbPasFait == calculerPosition(nbPas);
         }
     
     
