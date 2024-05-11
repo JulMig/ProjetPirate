@@ -25,11 +25,12 @@ public class ControlJeuPirate {
         jouer();
     }
     
-    private void jouer(){
-        //Indiquer au joueur que ces son tour
-        
+    private void jouer(){       
         boundary.afficherJoueur(jeu.getJoueurCourant());
-        //proposer au joueur de ce deplacer
+
+        boundary.setILancerDe(controlDeplacer);
+        boundary.lancerDes();
+        
         //numCase = boundary.deplacerJoueur(jeu.getJoueurCourant());
         //activer la case
         //boundary.activerCase(jeu.getCase(numCase));

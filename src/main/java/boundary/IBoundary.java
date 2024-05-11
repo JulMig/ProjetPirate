@@ -9,11 +9,11 @@ public interface IBoundary {
 	
 	public void afficherJoueur(Joueur joueurCourant);
 	
-	public void setILancerDe (ILancerDe ILancerDe);
+	public void setILancerDe (ILancerDe iLancerDe);
 	
 	public int lancerDes();
 	
-	public void setDeplacerPirate(IDeplacerPirate IDeplacerPirate);
+	public void setDeplacerPirate(IDeplacerPirate iDeplacerPirate);
 	
 	
 	
