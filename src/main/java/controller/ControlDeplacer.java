@@ -1,5 +1,5 @@
 package controller;
 
-public class ControlDeplacer {
+public class ControlDeplacer implements ILancerDe, IDeplacerPirate {
     
 }
