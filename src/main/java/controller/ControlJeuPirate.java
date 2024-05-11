@@ -6,18 +6,17 @@ public class ControlJeuPirate {
     ControlActiverCase controlActiverCase;
     ControlDeplacer controlDeplacer;
     ControlLancerPartie controlLancerPartie;
-    ControlVerifierFin controlVerifierPartie;
+    ControlVerifierFin controlVerifierFin;
     
     Jeu jeu;
     
     IBoundary boundary;
 
-    public ControlJeuPirate(ControlActiverCase controlActiverCase, ControlDeplacer controlDeplacer, ControlLancerPartie controlLancerPartie, ControlVerifierFin controlVerifierPartie, Jeu jeu, IBoundary boundary) {
+    public ControlJeuPirate(ControlActiverCase controlActiverCase, ControlDeplacer controlDeplacer, ControlLancerPartie controlLancerPartie, ControlVerifierFin controlVerifierFin, IBoundary boundary) {
         this.controlActiverCase = controlActiverCase;
         this.controlDeplacer = controlDeplacer;
         this.controlLancerPartie = controlLancerPartie;
-        this.controlVerifierPartie = controlVerifierPartie;
-        this.jeu = jeu;
+        this.controlVerifierFin = controlVerifierFin;
         this.boundary = boundary;
     }
     
@@ -33,6 +32,19 @@ public class ControlJeuPirate {
         //ControlVerifierFin.verifierFin(); + if
         //changer le tour ou annoncer la fin
      
+        
+    }
+    
+    public static void main(String[] args) {
+        ControlActiverCase controlActiverCase = new ControlActiverCase();
+        ControlDeplacer controlDeplacer = new ControlDeplacer();
+        ControlLancerPartie controlLancerPartie = new ControlLancerPartie();
+        ControlVerifierFin controlVerifierFin = new ControlVerifierFin();
+        
+        BoundaryJeuPirate boundary = new BoundaryJeuPirate();
+        
+        ControlJeuPirate controlJeuPirate = new ControlJeuPirate(controlActiverCase, controlDeplacer, controlLancerPartie, controlVerifierFin, boundary);
+        controlJeuPirate.jouer();
         
     }
     

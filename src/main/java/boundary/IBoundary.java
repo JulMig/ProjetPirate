@@ -7,7 +7,7 @@ import controller.ILancerDe;
 
 public interface IBoundary {
 	
-	public String afficherJoueur(Joueur joueurCourant);
+	public void afficherJoueur(Joueur joueurCourant);
 	
 	public void setILancerDe (ILancerDe ILancerDe);
 	

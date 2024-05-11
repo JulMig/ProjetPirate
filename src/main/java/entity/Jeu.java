@@ -6,6 +6,6 @@ public class Jeu {
     
     
    public Joueur getJoueurCourant(){
-       return null;
+       return joueurs[idJoueurCourant];
    }
 }
