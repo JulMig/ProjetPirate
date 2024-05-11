@@ -1,7 +1,7 @@
 package entity;
 
 public class Joueur {
-    String nom;
+    private String nom;
 
     public Joueur(String nom) {
         this.nom = nom;

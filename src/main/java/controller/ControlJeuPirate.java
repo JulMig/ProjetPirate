@@ -3,14 +3,14 @@ import entity.*;
 import boundary.*;
 
 public class ControlJeuPirate {
-    ControlActiverCase controlActiverCase;
-    ControlDeplacer controlDeplacer;
-    ControlLancerPartie controlLancerPartie;
-    ControlVerifierFin controlVerifierFin;
+    private ControlActiverCase controlActiverCase;
+    private ControlDeplacer controlDeplacer;
+    private ControlLancerPartie controlLancerPartie;
+    private ControlVerifierFin controlVerifierFin;
     
-    Jeu jeu;
+    private Jeu jeu;
     
-    IBoundary boundary;
+    private IBoundary boundary;
 
     public ControlJeuPirate(ControlActiverCase controlActiverCase, ControlDeplacer controlDeplacer, ControlLancerPartie controlLancerPartie, ControlVerifierFin controlVerifierFin, IBoundary boundary) {
         this.controlActiverCase = controlActiverCase;
