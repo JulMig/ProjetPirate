@@ -4,6 +4,7 @@ import entity.*;
 
 public class BoundaryJeuPirate implements IBoundary{
     
+    
     public void afficherJoueur(Joueur joueurCourant){
         System.out.println("C'est le tour de " + joueurCourant.getNom());
     }

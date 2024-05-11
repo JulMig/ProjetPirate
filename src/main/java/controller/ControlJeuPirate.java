@@ -20,7 +20,12 @@ public class ControlJeuPirate {
         this.boundary = boundary;
     }
     
-    public void jouer(){
+    public void initialiserPartie(){
+        jeu = controlLancerPartie.initialiserJeu();
+        jouer();
+    }
+    
+    private void jouer(){
         //Indiquer au joueur que ces son tour
         
         boundary.afficherJoueur(jeu.getJoueurCourant());
@@ -44,7 +49,7 @@ public class ControlJeuPirate {
         BoundaryJeuPirate boundary = new BoundaryJeuPirate();
         
         ControlJeuPirate controlJeuPirate = new ControlJeuPirate(controlActiverCase, controlDeplacer, controlLancerPartie, controlVerifierFin, boundary);
-        controlJeuPirate.jouer();
+        controlJeuPirate.initialiserPartie();
         
     }
     
