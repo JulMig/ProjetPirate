@@ -1,5 +1,5 @@
 package controller;
 
-public class ControlActiverCase {
+public class ControlActiverCase implements IActiverCase {
     
 }

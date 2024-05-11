@@ -23,7 +23,8 @@ public class ControlJeuPirate {
     
     public void jouer(){
         //Indiquer au joueur que ces son tour
-        //boundary.afficherJoueur(jeu.getJoueurCourant());
+        
+        boundary.afficherJoueur(jeu.getJoueurCourant());
         //proposer au joueur de ce deplacer
         //numCase = boundary.deplacerJoueur(jeu.getJoueurCourant());
         //activer la case

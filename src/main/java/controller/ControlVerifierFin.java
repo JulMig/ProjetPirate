@@ -1,5 +1,5 @@
 package controller;
 
-public class ControlVerifierFin {
+public class ControlVerifierFin implements IVerifierFin {
     
 }
