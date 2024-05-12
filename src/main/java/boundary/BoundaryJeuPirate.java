@@ -46,7 +46,7 @@ public class BoundaryJeuPirate implements IBoundary{
     }
     
     public void annoncerVainqueur(){
-        //System.out.println("Le gagnant est " + vainqueur.getNom());
+        System.out.println("Le nouveau capitaine du navire est " + iVerifierFin.donnerVainqueur());
         iVerifierFin = null;
     }
     

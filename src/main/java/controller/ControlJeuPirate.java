@@ -29,7 +29,7 @@ public class ControlJeuPirate {
     
     private void jouer(){
         
-        boolean fin = false;
+        boolean fin;
         
         do {
             boundary.afficherJoueur(jeu.getJoueurCourant());
