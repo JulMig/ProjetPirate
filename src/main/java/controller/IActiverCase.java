@@ -9,4 +9,6 @@ public interface IActiverCase {
     public int activerBombe(Joueur j, int numCase);
     
     public TypeCase getTypeCase(int numCase);
+    
+    public String getQuestion(int numCase);
 }
