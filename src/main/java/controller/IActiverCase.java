@@ -11,4 +11,6 @@ public interface IActiverCase {
     public TypeCase getTypeCase(int numCase);
     
     public String getQuestion(int numCase);
+    
+    public String[] getReponses(int numCase);
 }

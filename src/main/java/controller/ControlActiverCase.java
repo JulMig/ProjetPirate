@@ -40,11 +40,20 @@ public class ControlActiverCase implements IActiverCase {
         return vieRestante;
         
     }
-    public String qcm(int numCase){
+    public String getQuestion(int numCase){
         Case c = plateau.getCase(numCase);
         if( c instanceof CaseQCM qcm){
             String question= qcm.getQuestion();
-        return question;    
+            return question;    
         }
+        return "";
+    }
+    
+    public String[] getReponses(int numCase){
+        Case c = plateau.getCase(numCase);
+        if( c instanceof CaseQCM qcm){
+            return qcm.getReponses();    
+        }
+        return null;
     }
 }

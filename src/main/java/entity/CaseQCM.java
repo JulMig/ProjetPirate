@@ -44,6 +44,14 @@ public class CaseQCM extends Case{
         return question;
     }
     
+    public String[] getReponses(){
+        String[] reponses = new String[2];
+        reponses[0] = choix[0].getReponse();
+        reponses[1] = choix[1].getReponse();
+        
+        return reponses;
+    }
+    
    
     
 }

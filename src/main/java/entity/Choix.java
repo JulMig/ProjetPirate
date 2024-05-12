@@ -15,4 +15,14 @@ public class Choix {
         this.effetDeplacement = effetDeplacement;
     }
 
+    public String getReponse() {
+        return reponse;
+    }
+
+    public String getReaction() {
+        return reaction;
+    }
+
+    
+   
 }

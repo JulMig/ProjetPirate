@@ -24,4 +24,6 @@ public interface IBoundary {
         
         public void activerCase(int numCase, Joueur joueurCourant);
         
+        public int poserQuestion(int numCase);
+        
 }

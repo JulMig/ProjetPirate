@@ -61,12 +61,28 @@ public class BoundaryJeuPirate implements IBoundary{
             }
             case TypeCase.QCM : {
                 System.out.println("Un évènement va avoir lieu");
+                int rep = poserQuestion(numCase);
                 //TODO
                 break;
             }
         }
         
         iActiverCase = null;
+    }
+    
+    public int poserQuestion(int numCase){
+        System.out.println(iActiverCase.getQuestion(numCase));
+        String[] reponses = iActiverCase.getReponses(numCase);
+        System.out.println("0." + reponses[0]);
+        System.out.println("1." + reponses[1]);
+        
+        int rep = -1;
+        
+        do{
+            rep = scanner.nextInt();
+        } while(rep != 0 && rep != 1);
+        
+        return rep;
     }
     
     public void annoncerVainqueur(){
