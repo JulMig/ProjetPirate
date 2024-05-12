@@ -24,10 +24,18 @@ public class ControlJeuPirate {
     public void jouer(){
         //Indiquer au joueur que ces son tour
         //boundary.afficherJoueur(jeu.getJoueurCourant());
+        
+        //proposer au joueur de lancer le de
+        //boundary.setILancerDe(controlDeplacer);
+        //bondary.lancerDes();
+        
         //proposer au joueur de ce deplacer
+        //boundary.IDeplacerPirate(controlDeplacer);
         //numCase = boundary.deplacerJoueur(jeu.getJoueurCourant());
+        
         //activer la case
         //boundary.activerCase(jeu.getCase(numCase));
+        
         //verifier la fin
         //ControlVerifierFin.verifierFin(); + if
         //changer le tour ou annoncer la fin
