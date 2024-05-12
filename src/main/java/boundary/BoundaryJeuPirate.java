@@ -46,7 +46,9 @@ public class BoundaryJeuPirate implements IBoundary{
     }
     
     public void activerCase(int numCase, Joueur joueurCourant){
-        //TODO
+        
+        
+        iActiverCase = null;
     }
     
     public void annoncerVainqueur(){

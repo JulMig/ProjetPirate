@@ -9,8 +9,6 @@ public class ControlActiverCase implements IActiverCase {
         this.plateau = plateau;
     }
     
-    
-    
     public int perdreVie(Joueur j){
         //TODO
         return 0;
