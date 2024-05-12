@@ -23,4 +23,7 @@ public interface IBoundary {
         public void annoncerVainqueur();
         
         public void activerCase(int numCase, Joueur joueurCourant);
+        
+        public String getQuestion(int numCase);
+        
 }
