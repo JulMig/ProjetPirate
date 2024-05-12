@@ -1,6 +1,7 @@
 entity\Jeu.class
 controller\ControlJeuPirate.class
 entity\Joueur.class
+dialogue\MainFrame.class
 controller\ControlDeplacer.class
 controller\ControlLancerPartie.class
 boundary\INoyauFonctionnel.class
@@ -12,6 +13,7 @@ controller\IDeplacerPirate.class
 controller\ILancerDe.class
 boundary\BoundaryJeuPirate.class
 entity\De.class
+dialogue\MainFrame$1.class
 controller\IActiverCase.class
 controller\IVerifierFin.class
 boundary\IPirates.class

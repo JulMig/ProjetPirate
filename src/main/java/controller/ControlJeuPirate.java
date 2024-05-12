@@ -22,24 +22,30 @@ public class ControlJeuPirate {
     
     public void initialiserPartie(){
         jeu = controlLancerPartie.initialiserJeu();
+        Joueur[] joueurs = jeu.getJoueurs();
+        controlVerifierFin.setJoueurs(joueurs[0], joueurs[1]);
         jouer();
     }
     
-    private void jouer(){       
-        boundary.afficherJoueur(jeu.getJoueurCourant());
-
-        boundary.setILancerDe(controlDeplacer);
-        int nbPas = boundary.lancerDes();
+    private void jouer(){
         
-        boundary.setIDeplacerPirate(controlDeplacer);
-        boundary.deplacerPirate(jeu.getJoueurCourant(), nbPas);
-        //numCase = boundary.deplacerJoueur(jeu.getJoueurCourant());
-        //activer la case
-        //boundary.activerCase(jeu.getCase(numCase));
-        //verifier la fin
-        //ControlVerifierFin.verifierFin(); + if
-        //changer le tour ou annoncer la fin
-     
+        boolean fin = false;
+        
+        do {
+            boundary.afficherJoueur(jeu.getJoueurCourant());
+
+            boundary.setILancerDe(controlDeplacer);
+            int nbPas = boundary.lancerDes();
+        
+            boundary.setIDeplacerPirate(controlDeplacer);
+            boundary.deplacerPirate(jeu.getJoueurCourant(), nbPas);
+            //numCase = boundary.deplacerJoueur(jeu.getJoueurCourant());
+            //activer la case
+            //boundary.activerCase(jeu.getCase(numCase));
+            //verifier la fin
+            //ControlVerifierFin.verifierFin(); + if
+            //changer le tour ou annoncer la fin
+        }while (!fin);
         
     }
     

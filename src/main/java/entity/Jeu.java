@@ -7,7 +7,10 @@ public class Jeu {
     public Jeu(Joueur[] joueurs) {
         this.joueurs = joueurs;
     }
-    
+
+    public Joueur[] getJoueurs() {
+        return joueurs;
+    }
     
    public Joueur getJoueurCourant(){
        return joueurs[idJoueurCourant];
