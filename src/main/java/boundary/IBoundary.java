@@ -11,6 +11,8 @@ public interface IBoundary {
 	public void setILancerDe (ILancerDe iLancerDe);
         
         public void setIVerifierFin(IVerifierFin iVerfierFin);
+        
+        public void setIActiverCase(IActiverCase iActiverCase);
 	
 	public int lancerDes();
 	
@@ -19,4 +21,6 @@ public interface IBoundary {
 	public int deplacerPirate(Joueur joueurCourant, int nbPas);
 	
         public void annoncerVainqueur();
+        
+        public void activerCase(int numCase, Joueur joueurCourant);
 }

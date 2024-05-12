@@ -23,6 +23,7 @@ public class ControlJeuPirate {
     public void initialiserPartie(){
         jeu = controlLancerPartie.initialiserJeu();
         Joueur[] joueurs = jeu.getJoueurs();
+        controlActiverCase.setPlateau(jeu.getPlateau());
         controlVerifierFin.setJoueurs(joueurs[0], joueurs[1]);
         jouer();
     }
@@ -38,11 +39,10 @@ public class ControlJeuPirate {
             int nbPas = boundary.lancerDes();
         
             boundary.setIDeplacerPirate(controlDeplacer);
-            boundary.deplacerPirate(jeu.getJoueurCourant(), nbPas);
+            int numCase = boundary.deplacerPirate(jeu.getJoueurCourant(), nbPas);
             
-            //activer la case
-            //boundary.activerCase(jeu.getCase(numCase));
-            //verifier la fin
+            boundary.setIActiverCase(controlActiverCase);
+            boundary.activerCase(numCase, jeu.getJoueurCourant());
             
             fin = controlVerifierFin.verifierFin();
             if (!fin){

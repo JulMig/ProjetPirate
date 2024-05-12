@@ -1,3 +1,4 @@
+entity\Plateau.class
 entity\Jeu.class
 controller\ControlJeuPirate.class
 entity\Joueur.class
@@ -6,6 +7,7 @@ controller\ControlDeplacer.class
 controller\ControlLancerPartie.class
 boundary\INoyauFonctionnel.class
 controller\ControlVerifierFin.class
+entity\CaseBombe.class
 boundary\IBoundary.class
 controller\ControlActiverCase.class
 entity\Case.class
@@ -17,3 +19,4 @@ dialogue\MainFrame$1.class
 controller\IActiverCase.class
 controller\IVerifierFin.class
 boundary\IPirates.class
+entity\CaseQCM.class

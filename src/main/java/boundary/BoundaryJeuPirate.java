@@ -45,6 +45,10 @@ public class BoundaryJeuPirate implements IBoundary{
         return numCase;
     }
     
+    public void activerCase(int numCase, Joueur joueurCourant){
+        //TODO
+    }
+    
     public void annoncerVainqueur(){
         System.out.println("Le nouveau capitaine du navire est " + iVerifierFin.donnerVainqueur());
         iVerifierFin = null;
@@ -61,5 +65,11 @@ public class BoundaryJeuPirate implements IBoundary{
     public void setIVerifierFin(IVerifierFin iVerifierFin){
         this.iVerifierFin = iVerifierFin;
     }
+
+    public void setIActiverCase(IActiverCase iActiverCase) {
+        this.iActiverCase = iActiverCase;
+    }
+    
+    
     
 }

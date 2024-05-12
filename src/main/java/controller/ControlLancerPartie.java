@@ -13,9 +13,9 @@ public class ControlLancerPartie {
 	Joueur joueur1 = new Joueur("joueur1");
 	Joueur joueur2 = new Joueur("joueur2");
 	        
-	        
 	Joueur[] joueurs = {joueur1, joueur2};
-	        
+	
+        
 	        
 	return new Jeu(joueurs);
     }
