@@ -12,7 +12,7 @@ public class ControlDeplacer implements IDeplacerPirate, ILancerDe {
     }
     
     public int deplacerPirate(Joueur joueur, int nbPas){
-      return joueur.deplacerPirate(nbPas);
+        return joueur.deplacerPirate(nbPas);
         
     }
     public boolean verifierDeplacement(Joueur joueur, int nbPas, int nbPasFait){

@@ -15,4 +15,8 @@ public class Jeu {
    public Joueur getJoueurCourant(){
        return joueurs[idJoueurCourant];
    }
+   
+   public void changerTour(){
+       idJoueurCourant = (idJoueurCourant + 1)%2;
+   }
 }

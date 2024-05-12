@@ -39,13 +39,18 @@ public class ControlJeuPirate {
         
             boundary.setIDeplacerPirate(controlDeplacer);
             boundary.deplacerPirate(jeu.getJoueurCourant(), nbPas);
-            //numCase = boundary.deplacerJoueur(jeu.getJoueurCourant());
+            
             //activer la case
             //boundary.activerCase(jeu.getCase(numCase));
             //verifier la fin
-            //ControlVerifierFin.verifierFin(); + if
-            //changer le tour ou annoncer la fin
+            
+            fin = controlVerifierFin.verifierFin();
+            if (!fin){
+                jeu.changerTour();
+            }
         }while (!fin);
+        boundary.setIVerifierFin(controlVerifierFin);
+        boundary.annoncerVainqueur();
         
     }
     

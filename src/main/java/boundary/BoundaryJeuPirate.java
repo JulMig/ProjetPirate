@@ -8,7 +8,7 @@ public class BoundaryJeuPirate implements IBoundary{
     private IActiverCase iActiverCase;
     private IDeplacerPirate iDeplacerPirate;
     private ILancerDe iLancerDe;
-    private IVerifierFin iVerfierFin;
+    private IVerifierFin iVerifierFin;
     
     private Scanner scanner = new Scanner(System.in);
     
@@ -33,7 +33,7 @@ public class BoundaryJeuPirate implements IBoundary{
         int nbPasFait;
         
         do {
-            System.out.println("Sur quelle case allez vous ?");
+            System.out.println("Vous etes sur la case " + String.valueOf(joueurCourant.getPositionCourante())+ ".Sur quelle case allez vous ?");
             nbPasFait = scanner.nextInt();
         } while (!iDeplacerPirate.verifierDeplacement(joueurCourant, nbPas, nbPasFait));
         
@@ -41,7 +41,13 @@ public class BoundaryJeuPirate implements IBoundary{
         
         int numCase = iDeplacerPirate.deplacerPirate(joueurCourant, nbPas);
         
+        iDeplacerPirate = null;
         return numCase;
+    }
+    
+    public void annoncerVainqueur(){
+        //System.out.println("Le gagnant est " + vainqueur.getNom());
+        iVerifierFin = null;
     }
     
     public void setILancerDe (ILancerDe iLancerDe){
@@ -50,6 +56,10 @@ public class BoundaryJeuPirate implements IBoundary{
     
     public void setIDeplacerPirate(IDeplacerPirate iDeplacerPirate){
         this.iDeplacerPirate = iDeplacerPirate;
+    }
+    
+    public void setIVerifierFin(IVerifierFin iVerifierFin){
+        this.iVerifierFin = iVerifierFin;
     }
     
 }

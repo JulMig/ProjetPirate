@@ -17,6 +17,10 @@ public class Joueur {
     public int getVie() {
         return vie;
     }
+
+    public int getPositionCourante() {
+        return positionCourante;
+    }
     
     private int calculerPosition(int nbPas){
         int newPosition = positionCourante + nbPas;

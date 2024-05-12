@@ -1,15 +1,16 @@
 
 package boundary;
 
-import controller.IDeplacerPirate;
+import controller.*;
 import entity.Joueur;
-import controller.ILancerDe;
 
 public interface IBoundary {
 	
 	public void afficherJoueur(Joueur joueurCourant);
 	
 	public void setILancerDe (ILancerDe iLancerDe);
+        
+        public void setIVerifierFin(IVerifierFin iVerfierFin);
 	
 	public int lancerDes();
 	
@@ -17,5 +18,5 @@ public interface IBoundary {
 	
 	public int deplacerPirate(Joueur joueurCourant, int nbPas);
 	
-    
+        public void annoncerVainqueur();
 }
