@@ -18,6 +18,21 @@ public class Joueur {
         return vie;
     }
 
+    public void perdreVie(int nbVie){
+        vie -= nbVie;
+        if (vie < 0){
+            vie = 0;
+        }
+        
+    }
+    
+    public void gagnerVie(int nbVie){
+        vie += nbVie;
+        if(vie > 5){
+            vie = 5;
+        }
+    }
+    
     public int getPositionCourante() {
         return positionCourante;
     }

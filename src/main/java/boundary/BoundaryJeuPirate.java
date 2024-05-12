@@ -13,7 +13,7 @@ public class BoundaryJeuPirate implements IBoundary{
     private Scanner scanner = new Scanner(System.in);
     
     public void afficherJoueur(Joueur joueurCourant){
-        System.out.println("C'est le tour de " + joueurCourant.getNom());
+        System.out.println("\nC'est le tour de " + joueurCourant.getNom());
     }
 	
     public int lancerDes(){
@@ -46,7 +46,25 @@ public class BoundaryJeuPirate implements IBoundary{
     }
     
     public void activerCase(int numCase, Joueur joueurCourant){
+        TypeCase typeCase = iActiverCase.getTypeCase(numCase);
         
+        switch (typeCase){
+            case TypeCase.NORMAL : {
+                System.out.println("Rien ne ce passe");
+                break;
+            } 
+            case TypeCase.BOMBE : {
+                System.out.println("UNE BOMBE !!!!");
+                int vie = iActiverCase.activerBombe(joueurCourant, numCase);
+                System.out.println("Ouch il vous reste " + String.valueOf(vie) + " point de vie");
+                break;
+            }
+            case TypeCase.QCM : {
+                System.out.println("Un évènement va avoir lieu");
+                //TODO
+                break;
+            }
+        }
         
         iActiverCase = null;
     }

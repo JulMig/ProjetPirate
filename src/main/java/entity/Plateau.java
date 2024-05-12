@@ -32,10 +32,13 @@ public class Plateau {
                     break;
                 }
             }
-            
-            System.out.println(typeCase);      
+                 
         }
         
+    }
+    
+    public Case getCase(int numCase){
+        return cases[numCase];
     }
     
     

@@ -1,4 +1,5 @@
 entity\Plateau.class
+boundary\BoundaryJeuPirate$1.class
 entity\Jeu.class
 controller\ControlJeuPirate.class
 entity\Joueur.class
@@ -6,6 +7,7 @@ dialogue\MainFrame.class
 controller\ControlDeplacer.class
 controller\ControlLancerPartie.class
 boundary\INoyauFonctionnel.class
+entity\TypeCase.class
 controller\ControlVerifierFin.class
 entity\CaseBombe.class
 boundary\IBoundary.class

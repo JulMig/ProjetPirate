@@ -7,6 +7,7 @@ public class CaseQCM extends Case{
     private String[] effets;
 
     public CaseQCM() {
+        
     }
     
 }
