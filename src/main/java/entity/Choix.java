@@ -6,13 +6,11 @@ public class Choix {
     private String reaction;
     
     private int effetVie;
-    private int effetDeplacement;
 
-    public Choix(String reponse, String reaction, int effetVie, int effetDeplacement) {
+    public Choix(String reponse, String reaction, int effetVie) {
         this.reponse = reponse;
         this.reaction = reaction;
         this.effetVie = effetVie;
-        this.effetDeplacement = effetDeplacement;
     }
 
     public String getReponse() {
@@ -21,6 +19,10 @@ public class Choix {
 
     public String getReaction() {
         return reaction;
+    }
+
+    public int getEffetVie() {
+        return effetVie;
     }
 
     

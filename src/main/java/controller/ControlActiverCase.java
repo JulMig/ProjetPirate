@@ -56,4 +56,21 @@ public class ControlActiverCase implements IActiverCase {
         }
         return null;
     }
+    
+    public String playEffect(int numCase, int rep, Joueur joueur){
+        Case c = plateau.getCase(numCase);
+        if( c instanceof CaseQCM qcm){
+            String reaction = qcm.getReaction(rep);
+            int effetVie = qcm.getDegat(rep);
+            
+            if (effetVie > 0){
+                gagnerVie(joueur, effetVie);
+            } else {
+                perdreVie(joueur, -effetVie);
+            }
+            
+            return reaction;    
+        }
+        return "";
+    }
 }

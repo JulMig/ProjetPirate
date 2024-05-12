@@ -23,15 +23,18 @@ public class Joueur {
         if (vie < 0){
             vie = 0;
         }
+        System.out.println(vie);
         
     }
     
     public void gagnerVie(int nbVie){
         vie += nbVie;
-        if(vie > 5){
+        if(vie >= 5){
             vie = 5;
         }
+        System.out.println(vie);
     }
+    
     
     public int getPositionCourante() {
         return positionCourante;

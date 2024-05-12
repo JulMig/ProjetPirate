@@ -13,4 +13,6 @@ public interface IActiverCase {
     public String getQuestion(int numCase);
     
     public String[] getReponses(int numCase);
+    
+    public String playEffect(int numCase, int rep, Joueur joueur);
 }

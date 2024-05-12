@@ -62,7 +62,7 @@ public class BoundaryJeuPirate implements IBoundary{
             case TypeCase.QCM : {
                 System.out.println("Un évènement va avoir lieu");
                 int rep = poserQuestion(numCase);
-                //TODO
+                System.out.println(iActiverCase.playEffect(numCase, rep, joueurCourant));
                 break;
             }
         }
