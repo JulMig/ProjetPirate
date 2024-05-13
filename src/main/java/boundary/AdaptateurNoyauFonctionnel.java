@@ -69,11 +69,13 @@ public class AdaptateurNoyauFonctionnel implements INoyauFonctionnel, IBoundary 
 
 	@Override
 	public void deplacerPirate(Joueur joueurCourant, int nbPas) {
-		joueurCourant.deplacerPirate(nbPas);
+		iPirates.deplacerPirate(joueurCourant,nbPas);
 	}
 
 	@Override
 	public void annoncerVainqueur() {
+		iPirates.annoncerVainqueur(iVerifierFin.donnerVainqueur());
+		this.iVerifierFin = null;
 
 	}
 
@@ -97,7 +99,6 @@ public class AdaptateurNoyauFonctionnel implements INoyauFonctionnel, IBoundary 
 			int rep = iPirates.poserQuestion(numCase,iActiverCase.getQuestion(numCase),reponses[0],reponses[1]);
 			String effect = (iActiverCase.playEffect(numCase, rep, joueurCourant));
 			iPirates.caseQuestion(effect, joueurCourant.getVie(), joueurCourant);
-			
 			break;
 		}
 		}

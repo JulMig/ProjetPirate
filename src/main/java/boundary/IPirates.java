@@ -16,6 +16,8 @@ public interface IPirates {
 	
 	public void bloquerJetons();
 	
+	public void deplacerPirate(Joueur joueurCourant,int nbPas);
+	
 	public void caseNormale();
 	
 	public void caseBombe(int vie,Joueur joueurCourant);
@@ -23,5 +25,7 @@ public interface IPirates {
 	public void caseQuestion(String reaction,int vie,Joueur joueurCourant);
 	
 	public int poserQuestion(int numCase,String question,String reponse1,String reponse2);
+	
+	public void annoncerVainqueur(String nomVainqueur);
 	
 }
