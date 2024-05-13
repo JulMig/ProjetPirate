@@ -15,7 +15,8 @@ public class BoundaryJeuPirate implements IBoundary{
 
     @Override
     public void setControlJeuPirate(ControlJeuPirate controljeuPirate) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    	this.controlJeuPirate = controljeuPirate;
+        
     }
     
     public void afficherJoueur(Joueur joueurCourant){

@@ -111,8 +111,7 @@ public class AdaptateurNoyauFonctionnel implements INoyauFonctionnel, IBoundary 
 
     @Override
     public void setControlJeuPirate(ControlJeuPirate controljeuPirate) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    this.controlJeuPirate = controlJeuPirate;}
 
         
 
