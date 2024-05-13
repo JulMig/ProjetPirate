@@ -20,9 +20,7 @@ public class BoundaryJeuPirate implements IBoundary{
         
         System.out.println("Lancer le de ?");
         scanner.nextLine();
-        
         int[] des = iLancerDe.LancerDes();
-        
         System.out.println("Vous avez fait " + String.valueOf(des[0]) + " - " + String.valueOf(des[1]));
         
         iLancerDe = null;
@@ -49,17 +47,17 @@ public class BoundaryJeuPirate implements IBoundary{
         TypeCase typeCase = iActiverCase.getTypeCase(numCase);
         
         switch (typeCase){
-            case TypeCase.NORMAL : {
+            case NORMAL : {
                 System.out.println("Rien ne ce passe");
                 break;
             } 
-            case TypeCase.BOMBE : {
+            case BOMBE : {
                 System.out.println("UNE BOMBE !!!!");
                 int vie = iActiverCase.activerBombe(joueurCourant, numCase);
                 System.out.println("Ouch il vous reste " + String.valueOf(vie) + " point de vie");
                 break;
             }
-            case TypeCase.QCM : {
+            case QCM : {
                 System.out.println("Un évènement va avoir lieu");
                 int rep = poserQuestion(numCase);
                 System.out.println(iActiverCase.playEffect(numCase, rep, joueurCourant));

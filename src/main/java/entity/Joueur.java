@@ -1,17 +1,24 @@
 package entity;
 
+import java.awt.image.BufferedImage;
+
 public class Joueur {
     private String nom;
     private int vie = 5;
     private int positionCourante = 1;
+    private BufferedImage image;
             
-    public Joueur(String nom) {
+    public Joueur(String nom,BufferedImage image) {
         this.nom = nom;
-        
+        this.image = image;
     }
     
     public String getNom() {
         return nom;
+    }
+    
+    public BufferedImage getImage() {
+    	return image;	
     }
 
     public int getVie() {
@@ -23,7 +30,6 @@ public class Joueur {
         if (vie < 0){
             vie = 0;
         }
-        System.out.println(vie);
         
     }
     

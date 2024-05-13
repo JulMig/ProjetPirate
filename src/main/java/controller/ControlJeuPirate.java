@@ -25,33 +25,59 @@ public class ControlJeuPirate {
         Joueur[] joueurs = jeu.getJoueurs();
         controlActiverCase.setPlateau(jeu.getPlateau());
         controlVerifierFin.setJoueurs(joueurs[0], joueurs[1]);
-        jouer();
+        indiquerTour();
     }
     
-    private void jouer(){
+//    private void jouer(){
+//        
+//        boolean fin;
+//        
+//        do {
+//            boundary.afficherJoueur(jeu.getJoueurCourant());
+//            boundary.setILancerDe(controlDeplacer);
+//            int nbPas = boundary.lancerDes();
+//            
+//            boundary.setIDeplacerPirate(controlDeplacer);
+//            int numCase = boundary.deplacerPirate(jeu.getJoueurCourant(), nbPas);
+//            
+//            boundary.setIActiverCase(controlActiverCase);
+//            boundary.activerCase(numCase, jeu.getJoueurCourant());
+//            
+//            fin = controlVerifierFin.verifierFin();
+//            if (!fin){
+//                jeu.changerTour();
+//            }
+//        }while (!fin);
+//        boundary.setIVerifierFin(controlVerifierFin);
+//        boundary.annoncerVainqueur();
+//        
+//    }
+    
+    public void indiquerTour() {
+    	boundary.afficherJoueur(jeu.getJoueurCourant());
+        boundary.setILancerDe(controlDeplacer);     
+        boundary.lancerDes();
+    }
+    
+    public void finLancerDes(int nbPas) {
+    	boundary.setIDeplacerPirate(controlDeplacer);
+        boundary.deplacerPirate(jeu.getJoueurCourant(), nbPas);
         
-        boolean fin;
-        
-        do {
-            boundary.afficherJoueur(jeu.getJoueurCourant());
-
-            boundary.setILancerDe(controlDeplacer);
-            int nbPas = boundary.lancerDes();
-        
-            boundary.setIDeplacerPirate(controlDeplacer);
-            int numCase = boundary.deplacerPirate(jeu.getJoueurCourant(), nbPas);
-            
-            boundary.setIActiverCase(controlActiverCase);
-            boundary.activerCase(numCase, jeu.getJoueurCourant());
-            
-            fin = controlVerifierFin.verifierFin();
-            if (!fin){
-                jeu.changerTour();
-            }
-        }while (!fin);
-        boundary.setIVerifierFin(controlVerifierFin);
-        boundary.annoncerVainqueur();
-        
+    }
+    
+    public void finDeplacement(int newCase) {
+    	 boundary.setIActiverCase(controlActiverCase);
+         boundary.activerCase(newCase, jeu.getJoueurCourant());
+         boolean fin = controlVerifierFin.verifierFin();
+         
+         if (!fin){
+             jeu.changerTour();
+         }
+         else {
+        	 boundary.setIVerifierFin(controlVerifierFin);
+             boundary.annoncerVainqueur();    	 
+         }
+ 
     }
     
     public static void main(String[] args) {
