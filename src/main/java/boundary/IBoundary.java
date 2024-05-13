@@ -5,6 +5,8 @@ import controller.*;
 import entity.Joueur;
 
 public interface IBoundary {
+    
+        public void setControlJeuPirate(ControlJeuPirate controljeuPirate);
 
 	public void afficherJoueur(Joueur joueurCourant);
 

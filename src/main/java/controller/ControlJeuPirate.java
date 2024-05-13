@@ -22,6 +22,7 @@ public class ControlJeuPirate {
     
     public void initialiserPartie(){
         jeu = controlLancerPartie.initialiserJeu();
+        boundary.setControlJeuPirate(this);
         Joueur[] joueurs = jeu.getJoueurs();
         controlActiverCase.setPlateau(jeu.getPlateau());
         controlVerifierFin.setJoueurs(joueurs[0], joueurs[1]);

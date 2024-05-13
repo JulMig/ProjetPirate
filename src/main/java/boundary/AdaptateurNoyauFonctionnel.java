@@ -66,6 +66,8 @@ public class AdaptateurNoyauFonctionnel implements INoyauFonctionnel, IBoundary 
 		this.iDeplacerPirate = iDeplacerPirate;
 
 	}
+        
+        
 
 	@Override
 	public void deplacerPirate(Joueur joueurCourant, int nbPas) {
@@ -107,6 +109,12 @@ public class AdaptateurNoyauFonctionnel implements INoyauFonctionnel, IBoundary 
 
 	}
 
+    @Override
+    public void setControlJeuPirate(ControlJeuPirate controljeuPirate) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+        
 
 	@Override
 	public void verifierDeplacement(int caseArrivee, Joueur joueurCourant, int nbPas) {
