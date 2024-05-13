@@ -57,7 +57,7 @@ public class Joueur {
         return newPosition;
     }
     
-    public int deplacerPirate(int nbPas) {
+    public void deplacerPirate(int nbPas) {
         // Déplacer le pirate en ajoutant le nombre de pas à la position actuelle
         this.positionCourante = calculerPosition(nbPas);
         return this.positionCourante; // Retourne la nouvelle position du pirate c'est num case

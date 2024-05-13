@@ -27,31 +27,7 @@ public class ControlJeuPirate {
         controlVerifierFin.setJoueurs(joueurs[0], joueurs[1]);
         indiquerTour();
     }
-    
-//    private void jouer(){
-//        
-//        boolean fin;
-//        
-//        do {
-//            boundary.afficherJoueur(jeu.getJoueurCourant());
-//            boundary.setILancerDe(controlDeplacer);
-//            int nbPas = boundary.lancerDes();
-//            
-//            boundary.setIDeplacerPirate(controlDeplacer);
-//            int numCase = boundary.deplacerPirate(jeu.getJoueurCourant(), nbPas);
-//            
-//            boundary.setIActiverCase(controlActiverCase);
-//            boundary.activerCase(numCase, jeu.getJoueurCourant());
-//            
-//            fin = controlVerifierFin.verifierFin();
-//            if (!fin){
-//                jeu.changerTour();
-//            }
-//        }while (!fin);
-//        boundary.setIVerifierFin(controlVerifierFin);
-//        boundary.annoncerVainqueur();
-//        
-//    }
+
     
     public void indiquerTour() {
     	boundary.afficherJoueur(jeu.getJoueurCourant());
@@ -61,8 +37,7 @@ public class ControlJeuPirate {
     
     public void finLancerDes(int nbPas) {
     	boundary.setIDeplacerPirate(controlDeplacer);
-        boundary.deplacerPirate(jeu.getJoueurCourant(), nbPas);
-        
+        boundary.deplacerPirate(jeu.getJoueurCourant(), nbPas); 
     }
     
     public void finDeplacement(int newCase) {
@@ -72,10 +47,12 @@ public class ControlJeuPirate {
          
          if (!fin){
              jeu.changerTour();
+             indiquerTour();
          }
          else {
         	 boundary.setIVerifierFin(controlVerifierFin);
-             boundary.annoncerVainqueur();    	 
+             boundary.annoncerVainqueur();    	
+             
          }
  
     }
