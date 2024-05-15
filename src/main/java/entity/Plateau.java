@@ -3,7 +3,7 @@ package entity;
 import java.util.Random;
 
 public class Plateau {
-    private Case[] cases = new Case[30];
+    private CaseNormal[] cases = new CaseNormal[30];
 
     public Plateau(int nbBombe, int nbQCM) {
         int nbCaseNormal = 30 - (nbBombe + nbQCM);
@@ -17,7 +17,7 @@ public class Plateau {
             
             switch (typeCase){
                 case 0 : {
-                    cases[i] = new Case();
+                    cases[i] = new CaseNormal();
                     nbCaseNormal -= 1;
                     break;
                 }
@@ -37,7 +37,7 @@ public class Plateau {
         
     }
     
-    public Case getCase(int numCase){
+    public CaseNormal getCase(int numCase){
         return cases[numCase];
     }
     

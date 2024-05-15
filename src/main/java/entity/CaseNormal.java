@@ -1,7 +1,7 @@
 package entity;
 
 
-public class Case {
+public class CaseNormal {
     
     
     

@@ -28,7 +28,6 @@ public class ControlJeuPirate {
         controlVerifierFin.setJoueurs(joueurs[0], joueurs[1]);
         indiquerTour();
     }
-
     
     public void indiquerTour() {
     	boundary.afficherJoueur(jeu.getJoueurCourant());
@@ -58,7 +57,7 @@ public class ControlJeuPirate {
  
     }
     
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         ControlActiverCase controlActiverCase = new ControlActiverCase();
         ControlDeplacer controlDeplacer = new ControlDeplacer();
         ControlLancerPartie controlLancerPartie = new ControlLancerPartie();
@@ -69,6 +68,6 @@ public class ControlJeuPirate {
         ControlJeuPirate controlJeuPirate = new ControlJeuPirate(controlActiverCase, controlDeplacer, controlLancerPartie, controlVerifierFin, boundary);
         controlJeuPirate.initialiserPartie();
         
-    }
+    }*/
     
 }

@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package src;
+package dialogue;
 
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
@@ -13,7 +13,6 @@ import java.io.IOException;
 import java.util.Random;
 import javax.imageio.ImageIO;
 import javax.swing.Timer;
-import mainFramr.main;
 
 /**
  *
@@ -22,7 +21,7 @@ import mainFramr.main;
 public class AffichageDes extends javax.swing.JPanel {
 
     /**
-     * Creates new form Des
+     * Creates new form De
      */
     BufferedImage[] images = new BufferedImage[6];
     BufferedImage imageAAfficherD1;
@@ -44,9 +43,7 @@ public class AffichageDes extends javax.swing.JPanel {
         try {
             for (int i = 0; i < 6; i++) {
                 String n = i+1 + "";
-                //String path = getClass().getResource("/"+n +".PNG").getPath();
-                String path = "C:\\Users\\ASUS\\Desktop\\Document_Fac\\L3\\projetPirate\\test-merge\\src\\main\\resources/"+n +".PNG";
-                System.out.println(path);
+                String path = getClass().getResource("/Images/"+n +".PNG").getPath();
                 images[i] = ImageIO.read(new File(path));
 
                 timer = new Timer(50, (ActionEvent e) -> {
@@ -100,8 +97,8 @@ public class AffichageDes extends javax.swing.JPanel {
         super.paintComponent(g);
         
         if (imageAAfficherD1 != null && imageAAfficherD2 != null) {
-            g.drawImage(imageAAfficherD1, 0, 0, this);
-            g.drawImage(imageAAfficherD2, 150, 0, this);
+            g.drawImage(imageAAfficherD1, 10, 10, this);
+            g.drawImage(imageAAfficherD2, 150, 10, this);
         }
     }
 

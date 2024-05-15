@@ -2,7 +2,7 @@ package entity;
 
 import java.util.Random;
 
-public class CaseQCM extends Case{
+public class CaseQCM extends CaseNormal{
     private String question;
     private Choix [] choix = new Choix[2];
 

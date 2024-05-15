@@ -3,61 +3,24 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package dialogue;
-
-import java.awt.Graphics;
-import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import javax.imageio.ImageIO;
+import java.io.IOException;
 
 /**
  *
- * @author ASUS
+ * @author Julie Mignotte
  */
-public class Case extends javax.swing.JPanel {
+public class Jeton extends javax.swing.JPanel {
 
-    BufferedImage image;
     /**
-     * Creates new form Case
+     * Creates new form Jeton
      */
-    public Case() {
+    public Jeton() {
         initComponents();
-        loadImage(); // Charge l'image lors de la création de la case
-    }
-    
-    
-    private void loadImage() {
-        try {
-            File file = new File("C:\\Users\\ASUS\\Desktop\\Document_Fac\\L3\\projetPirate\\test-merge\\src\\main\\resources\\case.png");
-            image = ImageIO.read(file);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-    
-   
-     
-    @Override
-    protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
-        Graphics2D g2d = (Graphics2D) g;     
-        if (image != null) {
-            
-             g2d.drawImage(image, 0, 0, getWidth(), getHeight(), this);
-        }      
     }
 
-    int numCase;
-
-    public void setNumCase(int numCase) {
-        this.numCase = numCase;
-    }
-    
-    public int getNumCase() {
-        return numCase;
-    }
-    
-    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -66,6 +29,9 @@ public class Case extends javax.swing.JPanel {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+
+        setOpaque(false);
+        setPreferredSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -79,6 +45,29 @@ public class Case extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    @Override
+    public void paintComponent(java.awt.Graphics g){
+        super.paintComponent(g);
+        
+        if (image != null){
+            g.drawImage(image, 0, 0, this.getHeight(), this.getHeight(), null);
+            
+        }
+    }
+    
+    public void setImage(String path){
+        
+        try{
+            image = ImageIO.read(new File(getClass().getResource(path).toURI()));
+        } catch (IOException e){
+            e.printStackTrace();
+        } catch (java.net.URISyntaxException e) {
+            e.printStackTrace();  
+        }
+        this.repaint();
+    }
+    
+    BufferedImage image;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables

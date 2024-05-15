@@ -1,7 +1,7 @@
 package entity;
 import java.util.Random;
 
-public class CaseBombe extends Case{
+public class CaseBombe extends CaseNormal{
     int degat;
 
     public CaseBombe() {

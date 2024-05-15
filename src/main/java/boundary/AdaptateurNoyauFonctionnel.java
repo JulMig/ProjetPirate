@@ -24,7 +24,7 @@ public class AdaptateurNoyauFonctionnel implements INoyauFonctionnel, IBoundary 
 	public void afficherJoueur(Joueur joueurCourant) {
 		BufferedImage im = joueurCourant.getImage();
 		String nomPirate = joueurCourant.getNom();
-
+                System.out.println(controlJeuPirate);
 		iPirates.indiquerTour(im, nomPirate);
 	}
 
@@ -109,23 +109,28 @@ public class AdaptateurNoyauFonctionnel implements INoyauFonctionnel, IBoundary 
 
 	}
 
-    @Override
-    public void setControlJeuPirate(ControlJeuPirate controljeuPirate) {
-    this.controlJeuPirate = controlJeuPirate;}
-
+        @Override
+    public void setControlJeuPirate(ControlJeuPirate controlJeuPirate) {
+        this.controlJeuPirate = controlJeuPirate;
+    }
         
 
-	@Override
-	public void verifierDeplacement(int caseArrivee, Joueur joueurCourant, int nbPas) {
-		boolean deplacement = iDeplacerPirate.verifierDeplacement(joueurCourant, nbPas, caseArrivee);
+    @Override
+    public void verifierDeplacement(int caseArrivee, Joueur joueurCourant, int nbPas) {
+            boolean deplacement = iDeplacerPirate.verifierDeplacement(joueurCourant, nbPas, caseArrivee);
 
-		if (!deplacement) {
-			deplacerPirate(joueurCourant, nbPas);
-		} else {
-			iPirates.bloquerJetons();
-			controlJeuPirate.finDeplacement(iDeplacerPirate.deplacerPirate(joueurCourant, nbPas));
-			this.iDeplacerPirate = null;
-		}
-	}
-
+            if (!deplacement) {
+                    deplacerPirate(joueurCourant, nbPas);
+            } else {
+                    iPirates.bloquerJetons();
+                    controlJeuPirate.finDeplacement(iDeplacerPirate.deplacerPirate(joueurCourant, nbPas));
+                    this.iDeplacerPirate = null;
+            }
+    }
+        
+    public void setiPirates(IPirates iPirates) {
+        this.iPirates = iPirates;
+    }
+        
+        
 }

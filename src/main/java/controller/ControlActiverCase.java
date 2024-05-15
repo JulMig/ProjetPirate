@@ -20,7 +20,7 @@ public class ControlActiverCase implements IActiverCase {
     }
     
     public TypeCase getTypeCase(int numCase){
-        Case c = plateau.getCase(numCase);
+        CaseNormal c = plateau.getCase(numCase);
         
         if (c instanceof CaseBombe){
             return TypeCase.BOMBE;
@@ -32,7 +32,7 @@ public class ControlActiverCase implements IActiverCase {
     }
     
     public int activerBombe(Joueur j, int numCase){
-        Case c = plateau.getCase(numCase);
+        CaseNormal c = plateau.getCase(numCase);
         int vieRestante = 0;
         if (c instanceof CaseBombe bombe){
             vieRestante = perdreVie(j, bombe.getDegat());
@@ -41,7 +41,7 @@ public class ControlActiverCase implements IActiverCase {
         
     }
     public String getQuestion(int numCase){
-        Case c = plateau.getCase(numCase);
+        CaseNormal c = plateau.getCase(numCase);
         if( c instanceof CaseQCM qcm){
             String question= qcm.getQuestion();
             return question;    
@@ -50,7 +50,7 @@ public class ControlActiverCase implements IActiverCase {
     }
     
     public String[] getReponses(int numCase){
-        Case c = plateau.getCase(numCase);
+        CaseNormal c = plateau.getCase(numCase);
         if( c instanceof CaseQCM qcm){
             return qcm.getReponses();    
         }
@@ -58,7 +58,7 @@ public class ControlActiverCase implements IActiverCase {
     }
     
     public String playEffect(int numCase, int rep, Joueur joueur){
-        Case c = plateau.getCase(numCase);
+        CaseNormal c = plateau.getCase(numCase);
         if( c instanceof CaseQCM qcm){
             String reaction = qcm.getReaction(rep);
             int effetVie = qcm.getDegat(rep);
