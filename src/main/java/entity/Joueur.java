@@ -1,3 +1,4 @@
+
 package entity;
 
 import java.awt.image.BufferedImage;
@@ -38,7 +39,6 @@ public class Joueur {
         if(vie >= 5){
             vie = 5;
         }
-        System.out.println(vie);
     }
     
     
