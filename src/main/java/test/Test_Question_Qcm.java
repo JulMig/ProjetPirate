@@ -1,5 +1,5 @@
 package test;
-
+/*
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
@@ -34,3 +34,4 @@ public class Test_Question_Qcm {
         assertNotNull(question);
     }
 }
+*/

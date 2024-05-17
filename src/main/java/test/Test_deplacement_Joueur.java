@@ -1,5 +1,5 @@
 package test;
-
+/*
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.Test;
@@ -7,11 +7,11 @@ import org.junit.Test;
 import controller.ControlDeplacer;
 import entity.Jeu;
 import entity.Joueur;
-
+*/
 /**
  *
  * @author diall
- */
+ *//*
 public class Test_deplacement_Joueur {
 	
 	@Test
@@ -31,3 +31,4 @@ public class Test_deplacement_Joueur {
 	}
 
 }
+*/

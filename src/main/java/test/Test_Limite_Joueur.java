@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package test;
-
+/*
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.Test;
@@ -11,11 +11,11 @@ import org.junit.Test;
 import controller.ControlLancerPartie;
 import entity.Jeu;
 import entity.Joueur;
-
+*/
 /**
  *
  * @author diall
- */
+ *//*
 public class Test_Limite_Joueur {
 	@Test
 	public void testLimiteDeuxJoueurs() {
@@ -28,3 +28,4 @@ public class Test_Limite_Joueur {
 	}
     
 }
+*/

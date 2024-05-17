@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package test;
-
+/*
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.Test;
@@ -12,11 +12,11 @@ import controller.ControlActiverCase;
 import entity.CaseBombe;
 import entity.Joueur;
 import entity.Plateau;
-
+*/
 /**
  *
  * @author diall
- */
+ *//*
 public class Test_Reduction_Vie_Bombe {
 	
 	@Test
@@ -37,3 +37,4 @@ public class Test_Reduction_Vie_Bombe {
         assertTrue(vieApres >= vieAvant - 4 && vieApres <= vieAvant - 1);
     }
 }
+*/

@@ -38,7 +38,7 @@ public class Plateau {
     }
     
     public CaseNormal getCase(int numCase){
-        return cases[numCase];
+        return cases[numCase-1];
     }
     
     

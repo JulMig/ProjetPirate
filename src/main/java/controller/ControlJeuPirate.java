@@ -57,7 +57,7 @@ public class ControlJeuPirate {
  
     }
     
-    /*public static void main(String[] args) {
+    public static void main(String[] args) {
         ControlActiverCase controlActiverCase = new ControlActiverCase();
         ControlDeplacer controlDeplacer = new ControlDeplacer();
         ControlLancerPartie controlLancerPartie = new ControlLancerPartie();
@@ -68,6 +68,6 @@ public class ControlJeuPirate {
         ControlJeuPirate controlJeuPirate = new ControlJeuPirate(controlActiverCase, controlDeplacer, controlLancerPartie, controlVerifierFin, boundary);
         controlJeuPirate.initialiserPartie();
         
-    }*/
+    }
     
 }
