@@ -235,12 +235,14 @@ public class MenuFrame extends javax.swing.JFrame {
             if(tableau[0]!= null){
                 tableau[0].setBorder(new LineBorder(Color.black, 3));
             }
+            if (tableau[1] == pirate12) tableau[1] = null;
             tableau[0] = pirate12;
             tableau[0].setBorder(new LineBorder(Color.blue, 3));
         }else{
             if(tableau[1]!= null){
                 tableau[1].setBorder(new LineBorder(Color.black, 3));
             }
+            if (tableau[0] == pirate12) tableau[0] = null;
             tableau[1] = pirate12;
             tableau[1].setBorder(new LineBorder(Color.red, 3));
         }
@@ -251,12 +253,14 @@ public class MenuFrame extends javax.swing.JFrame {
             if(tableau[0]!= null){
                 tableau[0].setBorder(new LineBorder(Color.black, 3));
             }
+            if (tableau[1] == pirate21) tableau[1] = null;
             tableau[0] = pirate21;
             tableau[0].setBorder(new LineBorder(Color.blue, 3));
         }else{
             if(tableau[1]!= null){
                 tableau[1].setBorder(new LineBorder(Color.black, 3));
             }
+            if (tableau[0] == pirate21) tableau[0] = null;
             tableau[1] = pirate21;
             tableau[1].setBorder(new LineBorder(Color.red, 3));
         }
@@ -267,12 +271,14 @@ public class MenuFrame extends javax.swing.JFrame {
             if(tableau[0]!= null){
                 tableau[0].setBorder(new LineBorder(Color.black, 3));
             }
+            if (tableau[1] == pirate31) tableau[1] = null;
             tableau[0] = pirate31;
             tableau[0].setBorder(new LineBorder(Color.blue, 3));
         }else{
             if(tableau[1]!= null){
                 tableau[1].setBorder(new LineBorder(Color.black, 3));
             }
+            if (tableau[0] == pirate31) tableau[0] = null;
             tableau[1] = pirate31;
             tableau[1].setBorder(new LineBorder(Color.red, 3));
         }
@@ -283,12 +289,14 @@ public class MenuFrame extends javax.swing.JFrame {
             if(tableau[0]!= null){
                 tableau[0].setBorder(new LineBorder(Color.black, 3));
             }
+            if (tableau[1] == pirate41) tableau[1] = null;
             tableau[0] = pirate41;
             tableau[0].setBorder(new LineBorder(Color.blue, 3));
         }else{
             if(tableau[1]!= null){
                 tableau[1].setBorder(new LineBorder(Color.black, 3));
             }
+            if (tableau[0] == pirate41) tableau[0] = null;
             tableau[1] = pirate41;
             tableau[1].setBorder(new LineBorder(Color.red, 3));
         }
