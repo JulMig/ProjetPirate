@@ -994,6 +994,8 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
     /**
      * @param args the command line arguments
      */
+    
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -1019,10 +1021,8 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
         //</editor-fold>
         //</editor-fold>
 
-        
-        
-        
         /* Create and display the form  LAMBAAAA*/
+        /*
         java.awt.EventQueue.invokeLater(() -> {
             ControlActiverCase controlActiverCase = new ControlActiverCase();
             ControlDeplacer controlDeplacer = new ControlDeplacer();
@@ -1042,8 +1042,9 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             System.out.println(controlJeuPirate);
             controlJeuPirate.initialiserPartie("1","2",null,null);
         });
-        
-    }   
+        */
+    }
+    
 
     
     public void debloquerDes(){

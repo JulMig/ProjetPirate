@@ -4,6 +4,12 @@
  */
 package dialogue;
 
+import boundary.AdaptateurNoyauFonctionnel;
+import controller.ControlActiverCase;
+import controller.ControlDeplacer;
+import controller.ControlJeuPirate;
+import controller.ControlLancerPartie;
+import controller.ControlVerifierFin;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.event.MouseAdapter;
@@ -226,7 +232,9 @@ public class MenuFrame extends javax.swing.JFrame {
     
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        this.dispose();
+        this.setVisible(false);
+        lancerJeu("","",null,null);
+        
        
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -300,6 +308,28 @@ public class MenuFrame extends javax.swing.JFrame {
             tableau[1] = pirate41;
             tableau[1].setBorder(new LineBorder(Color.red, 3));
         }
+    }
+    
+    public void lancerJeu(String j1Name, String j2Name, BufferedImage j1, BufferedImage j2){
+        java.awt.EventQueue.invokeLater(() -> {
+            ControlActiverCase controlActiverCase = new ControlActiverCase();
+            ControlDeplacer controlDeplacer = new ControlDeplacer();
+            ControlLancerPartie controlLancerPartie = new ControlLancerPartie();
+            ControlVerifierFin controlVerifierFin = new ControlVerifierFin();
+            
+            AdaptateurNoyauFonctionnel boundary = new AdaptateurNoyauFonctionnel();
+            MainFrame m = new MainFrame();
+            m.setVisible(true);
+            m.setAdaptateur(boundary);
+            System.out.println(m);
+            boundary.setiPirates(m);
+            
+            ControlJeuPirate controlJeuPirate = new ControlJeuPirate(controlActiverCase, controlDeplacer, controlLancerPartie, controlVerifierFin, boundary);
+            System.out.println(controlJeuPirate);
+            boundary.setControlJeuPirate(controlJeuPirate);
+            System.out.println(controlJeuPirate);
+            controlJeuPirate.initialiserPartie("1","2",null,null);
+        });
     }
     /**
      * @param args the command line arguments
