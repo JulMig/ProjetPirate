@@ -910,8 +910,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenu2MouseClicked
 
-    Timer timer;
-    AdaptateurNoyauFonctionnel adaptateur;
+    
 
     public void setAdaptateur(AdaptateurNoyauFonctionnel adaptateur) {
         this.adaptateur = adaptateur;
@@ -1027,6 +1026,8 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
     public void debloquerDeplacement(int caseActuelle, Joueur joueurActuel){
         
     } 
+    Timer timer;
+    AdaptateurNoyauFonctionnel adaptateur;
     private Case[] cases = new Case[30];
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Plateauihm;
@@ -1094,6 +1095,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
                     affichageDes1.setVisible(false);
                     timer.stop();
         });
+        
         timer.start();
     }
 

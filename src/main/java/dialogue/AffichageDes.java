@@ -43,9 +43,9 @@ public class AffichageDes extends javax.swing.JPanel {
         try {
             for (int i = 0; i < 6; i++) {
                 String n = i+1 + "";
-                String path = getClass().getResource("/Images/"+n +".PNG").getPath();
-                images[i] = ImageIO.read(new File(path));
-
+                images[i] = ImageIO.read(new File(getClass().getResource("/Images/"+n +".png").toURI()));
+            }
+            
                 timer = new Timer(50, (ActionEvent e) -> {
                     imageAAfficherD1 = images[new Random().nextInt(6)];
                     imageAAfficherD2 = images[new Random().nextInt(6)];
@@ -59,13 +59,14 @@ public class AffichageDes extends javax.swing.JPanel {
                     }
                     
                 });
-            }
-        } catch (IOException ex) {
+            
+        } catch (IOException | java.net.URISyntaxException ex) {
             System.out.println("Erreur du chargement de l'image");
         }
         compteur = 0;
         nbAAfficherD1 = nbD1-1;
         nbAAfficherD2 = nbD2-1;
+        System.out.println(timer);
         timer.start();
     }
     

@@ -28,7 +28,7 @@ public class Case extends javax.swing.JPanel {
     
     private void loadImage() {
         try {
-            File file = new File("C:\\Users\\ASUS\\Desktop\\Document_Fac\\L3\\projetPirate\\test-merge\\src\\main\\resources\\case.png");
+            File file = new File(getClass().getResource("/Images/case.png").toURI());
             image = ImageIO.read(file);
         } catch (Exception e) {
             e.printStackTrace();
