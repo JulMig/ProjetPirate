@@ -17,6 +17,7 @@ import javax.imageio.ImageIO;
 public class Case extends javax.swing.JPanel {
 
     BufferedImage image;
+    private int numCase = 0;
     /**
      * Creates new form Case
      */
@@ -40,14 +41,16 @@ public class Case extends javax.swing.JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        Graphics2D g2d = (Graphics2D) g;     
+        Graphics2D g2d = (Graphics2D) g; 
         if (image != null) {
-            
-             g2d.drawImage(image, 0, 0, getWidth(), getHeight(), this);
-        }      
+            g2d.drawImage(image, 0, 0, getWidth(), getHeight(), this);
+        } 
+        if(numCase != 0){
+            g2d.drawString(String.valueOf(numCase),10,10);
+        }
     }
 
-    int numCase;
+    
 
     public void setNumCase(int numCase) {
         this.numCase = numCase;

@@ -26,6 +26,7 @@ boundary\AdaptateurNoyauFonctionnel.class
 dialogue\BarreDeVie.class
 dialogue\Case.class
 entity\Joueur.class
+dialogue\MainFrame$7.class
 dialogue\AffichageDes.class
 dialogue\MenuFrame.class
 boundary\INoyauFonctionnel.class

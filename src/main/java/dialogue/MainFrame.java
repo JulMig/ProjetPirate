@@ -66,6 +66,10 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
         cases[27] = case28;
         cases[28] = case29;
         cases[29] = case30;
+        
+        for(int i = 1; i<=30; i++){
+            cases[i-1].setNumCase(i);
+        }
    
         jeton1.setLocation(15, 15);
         jeton2.setLocation(50, 50);
@@ -83,7 +87,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        historique = new javax.swing.JTextArea();
         jPanel2 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
@@ -152,9 +156,10 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             }
         });
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        historique.setEditable(false);
+        historique.setColumns(20);
+        historique.setRows(5);
+        jScrollPane1.setViewportView(historique);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -314,6 +319,11 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
         jeton2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 jeton2MouseDragged(evt);
+            }
+        });
+        jeton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jeton2MouseReleased(evt);
             }
         });
 
@@ -949,6 +959,12 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             adaptateur.verifierDeplacement(inCase(jeton1));
         }
     }//GEN-LAST:event_jeton1MouseReleased
+
+    private void jeton2MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jeton2MouseReleased
+        if(jeton2.isEnabled()){
+            adaptateur.verifierDeplacement(inCase(jeton2));
+        }
+    }//GEN-LAST:event_jeton2MouseReleased
     
     private void initJetons(){
         jeton1.setImage("/Images/craneBleu.png");
@@ -968,7 +984,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
     private int inCase(Jeton jeton){
         for (int i = 0; i < 30; i++) {
           if(SwingUtilities.isRectangleContainingRectangle(cases[i].getBounds(), jeton.getBounds()))
-              return i;
+              return i+1;
         }
         return -1;
     }
@@ -1072,6 +1088,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
     private dialogue.Case case7;
     private dialogue.Case case8;
     private dialogue.Case case9;
+    private javax.swing.JTextArea historique;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -1086,7 +1103,6 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     private dialogue.Jeton jeton1;
     private dialogue.Jeton jeton2;
     private dialogue.BarreDeVie vieJ1;
@@ -1095,6 +1111,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
 
     @Override
     public void indiquerTour(BufferedImage image, String nomPirate) {
+        historique.append(nomPirate+" est en train de jouer ! \n");
     }
 
     @Override
@@ -1111,6 +1128,8 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
 
     @Override
     public void bloquerJetons() {
+        jeton1.setEnabled(false);
+        jeton2.setEnabled(false);
         
     }
 
@@ -1125,17 +1144,17 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
 
     @Override
     public void caseNormale() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        historique.append("Rien ne se passe \n");
     }
 
     @Override
     public void caseBombe(int vie, Joueur joueurCourant) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        historique.append("BOUM ! \n");    
     }
 
     @Override
     public void caseQuestion(String reaction, int vie, Joueur joueurCourant) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        historique.append("Question ? \n");    
     }
 
     @Override
