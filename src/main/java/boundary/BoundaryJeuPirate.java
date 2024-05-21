@@ -38,20 +38,22 @@ public class BoundaryJeuPirate implements IBoundary{
         controlJeuPirate.finLancerDes(des[0] + des[1]);
     }
 
-    public void deplacerPirate(Joueur joueurCourant, int nbPas){
+    public void deplacerPirate(int nbPas){
+        Joueur joueurCourant = iDeplacerPirate.getJoueurCourant();
         int nbPasFait;
         
         System.out.println("Vous etes sur la case " + String.valueOf(joueurCourant.getPositionCourante())+ ".Sur quelle case allez vous ?");
         nbPasFait = scanner.nextInt();
         
-        verifierDeplacement(nbPasFait, joueurCourant, nbPas);
+        verifierDeplacement(nbPasFait, nbPas);
         
     }
 
-    public void verifierDeplacement(int caseArrivee, Joueur joueurCourant, int nbPas){
+    public void verifierDeplacement(int caseArrivee, int nbPas){
+        Joueur joueurCourant = iDeplacerPirate.getJoueurCourant();
         boolean deplacement = iDeplacerPirate.verifierDeplacement(joueurCourant, nbPas, caseArrivee);
         
-        if(!deplacement) deplacerPirate(joueurCourant, nbPas);
+        if(!deplacement) deplacerPirate(nbPas);
         else{
             System.out.println("Deplacement valide");
             int numCase = iDeplacerPirate.deplacerPirate(joueurCourant, nbPas);
