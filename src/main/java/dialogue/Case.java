@@ -22,13 +22,13 @@ public class Case extends javax.swing.JPanel {
      */
     public Case() {
         initComponents();
-        loadImage(); // Charge l'image lors de la création de la case
+        loadImage("/Images/case.png"); // Charge l'image lors de la création de la case
     }
     
     
-    private void loadImage() {
+    private void loadImage(String path) {
         try {
-            File file = new File(getClass().getResource("/Images/case.png").toURI());
+            File file = new File(getClass().getResource(path).toURI());
             image = ImageIO.read(file);
         } catch (Exception e) {
             e.printStackTrace();
