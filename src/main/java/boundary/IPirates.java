@@ -16,7 +16,7 @@ public interface IPirates {
 	
 	public void bloquerJetons();
 	
-	public void deplacerPirate(int joueurCourant,int nbPas);
+	public void deplacerPirate(int joueurCourant);
 	
 	public void caseNormale();
 	

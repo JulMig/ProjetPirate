@@ -22,7 +22,7 @@ public class Case extends javax.swing.JPanel {
      */
     public Case() {
         initComponents();
-        loadImage("/Images/case.png"); // Charge l'image lors de la création de la case
+        loadImage("/Images/sable.png"); // Charge l'image lors de la création de la case
     }
     
     

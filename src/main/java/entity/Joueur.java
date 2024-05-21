@@ -9,6 +9,7 @@ public class Joueur {
     private int positionCourante = 1;
     private BufferedImage image;
     private int id;
+    private int nbPas;
             
     public Joueur(int id, String nom,BufferedImage image) {
         this.id = id;
@@ -19,6 +20,15 @@ public class Joueur {
     public int getId() {
         return id;
     }
+
+    public int getNbPas() {
+        return nbPas;
+    }
+
+    public void setNbPas(int nbPas) {
+        this.nbPas = nbPas;
+    }
+    
     
     
     public String getNom() {

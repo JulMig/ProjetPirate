@@ -946,7 +946,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
 
     private void jeton1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jeton1MouseReleased
         if(jeton1.isEnabled()){
-            adaptateur.verifierDeplacement(inCase(jeton1), 3);
+            adaptateur.verifierDeplacement(inCase(jeton1));
         }
     }//GEN-LAST:event_jeton1MouseReleased
     
@@ -1115,7 +1115,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
     }
 
     @Override
-    public void deplacerPirate(int joueurCourant, int nbPas) {
+    public void deplacerPirate(int joueurCourant) {
         if(joueurCourant == 1){
             jeton1.setEnabled(true);
         }else{            

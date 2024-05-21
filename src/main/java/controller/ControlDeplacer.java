@@ -27,4 +27,8 @@ public class ControlDeplacer implements IDeplacerPirate, ILancerDe {
     public Joueur getJoueurCourant(){
         return jeu.getJoueurCourant();
     }
+    
+    public int getNouvellePositionJoueurCourant(){
+        return jeu.getJoueurCourant().getNbPas();
+    }
 }

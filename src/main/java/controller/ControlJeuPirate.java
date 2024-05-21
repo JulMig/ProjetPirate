@@ -37,6 +37,7 @@ public class ControlJeuPirate {
     }
     
     public void finLancerDes(int nbPas) {
+        jeu.getJoueurCourant().setNbPas(nbPas);
     	boundary.setIDeplacerPirate(controlDeplacer);
         boundary.deplacerPirate(nbPas); 
     }
