@@ -5,22 +5,27 @@
 package dialogue;
 
 import java.awt.BorderLayout;
-import java.awt.Image;
+import java.awt.Color;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.net.URL;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
+import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
+import javax.swing.border.LineBorder;
 
 /**
  *
  * @author gabri
  */
 public class MenuFrame extends javax.swing.JFrame {
+    
+    public JPanel[] tableau = new JPanel[2];
 
     /**
      * Creates new form MenuFrame
@@ -31,6 +36,7 @@ public class MenuFrame extends javax.swing.JFrame {
         this.add(fondEcran1, BorderLayout.CENTER);
         BufferedImage image = ImageIO.read(new File(getClass().getResource("/Images/logo_pirate.png").toURI()));
         this.setIconImage(image);
+        
     }
 
     /**
@@ -52,6 +58,30 @@ public class MenuFrame extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        pirate12.addMouseListener(new MouseAdapter(){
+            @Override
+            public void mouseClicked(MouseEvent e){
+                pirate1Handler(e);
+            }
+        });
+        pirate21.addMouseListener(new MouseAdapter(){
+            @Override
+            public void mouseClicked(MouseEvent e){
+                pirate2Handler(e);
+            }
+        });
+        pirate31.addMouseListener(new MouseAdapter(){
+            @Override
+            public void mouseClicked(MouseEvent e){
+                pirate3Handler(e);
+            }
+        });
+        pirate41.addMouseListener(new MouseAdapter(){
+            @Override
+            public void mouseClicked(MouseEvent e){
+                pirate4Handler(e);
+            }
+        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Panic'Pirate");
@@ -193,12 +223,76 @@ public class MenuFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         this.dispose();
        
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    public void pirate1Handler(MouseEvent evt){
+        if(SwingUtilities.isLeftMouseButton(evt)){
+            if(tableau[0]!= null){
+                tableau[0].setBorder(new LineBorder(Color.black, 3));
+            }
+            tableau[0] = pirate12;
+            tableau[0].setBorder(new LineBorder(Color.blue, 3));
+        }else{
+            if(tableau[1]!= null){
+                tableau[1].setBorder(new LineBorder(Color.black, 3));
+            }
+            tableau[1] = pirate12;
+            tableau[1].setBorder(new LineBorder(Color.red, 3));
+        }
+    }
+    
+    public void pirate2Handler(MouseEvent evt){
+        if(SwingUtilities.isLeftMouseButton(evt)){
+            if(tableau[0]!= null){
+                tableau[0].setBorder(new LineBorder(Color.black, 3));
+            }
+            tableau[0] = pirate21;
+            tableau[0].setBorder(new LineBorder(Color.blue, 3));
+        }else{
+            if(tableau[1]!= null){
+                tableau[1].setBorder(new LineBorder(Color.black, 3));
+            }
+            tableau[1] = pirate21;
+            tableau[1].setBorder(new LineBorder(Color.red, 3));
+        }
+    }
+    
+    public void pirate3Handler(MouseEvent evt){
+        if(SwingUtilities.isLeftMouseButton(evt)){
+            if(tableau[0]!= null){
+                tableau[0].setBorder(new LineBorder(Color.black, 3));
+            }
+            tableau[0] = pirate31;
+            tableau[0].setBorder(new LineBorder(Color.blue, 3));
+        }else{
+            if(tableau[1]!= null){
+                tableau[1].setBorder(new LineBorder(Color.black, 3));
+            }
+            tableau[1] = pirate31;
+            tableau[1].setBorder(new LineBorder(Color.red, 3));
+        }
+    }
+    
+    public void pirate4Handler(MouseEvent evt){
+        if(SwingUtilities.isLeftMouseButton(evt)){
+            if(tableau[0]!= null){
+                tableau[0].setBorder(new LineBorder(Color.black, 3));
+            }
+            tableau[0] = pirate41;
+            tableau[0].setBorder(new LineBorder(Color.blue, 3));
+        }else{
+            if(tableau[1]!= null){
+                tableau[1].setBorder(new LineBorder(Color.black, 3));
+            }
+            tableau[1] = pirate41;
+            tableau[1].setBorder(new LineBorder(Color.red, 3));
+        }
+    }
     /**
      * @param args the command line arguments
      */

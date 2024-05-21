@@ -7,11 +7,11 @@ dialogue\MainFrame$6.class
 boundary\BoundaryJeuPirate.class
 entity\De.class
 dialogue\move.class
+dialogue\MenuFrame$6.class
 controller\IVerifierFin.class
 entity\CaseQCM.class
-dialogue\Pirate4$1.class
 entity\Plateau.class
-dialogue\Pirate2$1.class
+dialogue\MenuFrame$3.class
 controller\IDeplacerPirate.class
 controller\ILancerDe.class
 entity\CaseNormal.class
@@ -32,6 +32,7 @@ dialogue\MenuFrame.class
 boundary\INoyauFonctionnel.class
 dialogue\Pirate4.class
 dialogue\move$1.class
+dialogue\MenuFrame$4.class
 dialogue\MainFrame$1.class
 dialogue\MainFrame$4.class
 controller\IActiverCase.class
@@ -40,9 +41,7 @@ dialogue\MenuFrame$1.class
 dialogue\Pirate1.class
 controller\ControlJeuPirate.class
 dialogue\MainFrame$3.class
-dialogue\Pirate3$1.class
 dialogue\FondEcran.class
-dialogue\Pirate1$1.class
 dialogue\move$3.class
 dialogue\Pirate3.class
 controller\ControlDeplacer.class
@@ -51,3 +50,4 @@ controller\ControlVerifierFin.class
 entity\CaseBombe.class
 boundary\IBoundary.class
 controller\ControlActiverCase.class
+dialogue\MenuFrame$5.class

@@ -64,11 +64,6 @@ public class Pirate4 extends javax.swing.JPanel {
         setMaximumSize(new java.awt.Dimension(170, 170));
         setMinimumSize(new java.awt.Dimension(170, 1701));
         setPreferredSize(new java.awt.Dimension(170, 170));
-        addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                formMouseClicked(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -82,25 +77,6 @@ public class Pirate4 extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
-        if (SwingUtilities.isRightMouseButton(evt) && !is_clicked) {
-            this.setBorder(new LineBorder(Color.red, 4));
-            is_clicked = true;
-        }
-        else if (SwingUtilities.isRightMouseButton(evt) && is_clicked) {
-            this.setBorder(new LineBorder(Color.black, 3));
-            is_clicked = false;
-        }
-        else if (SwingUtilities.isLeftMouseButton(evt) && !is_clicked) {
-            is_clicked = true;
-            this.setBorder(new LineBorder(Color.blue, 4));
-        }
-
-        else if (SwingUtilities.isLeftMouseButton(evt) && is_clicked) {
-            this.setBorder(new LineBorder(Color.black, 3));
-            is_clicked = false;
-        }
-    }//GEN-LAST:event_formMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
