@@ -1153,7 +1153,8 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
 
     @Override
     public void caseBombe(int vie, Joueur joueurCourant) {
-        this.repaint();
+        cases[joueurCourant.getPositionCourante()-1].loadImage("/Images/bombe.png");
+        
         historique.append("BOUM ! vous êtes tombé sur une bombe... "+joueurCourant.getNom()+" a actuellement "+vie+" points de vie.\n");
         if(joueurCourant.getId()==1){
             try {
@@ -1174,12 +1175,14 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
                 Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
+        
+        this.repaint();
     }
 
     @Override
     public void caseQuestion(String reaction, int vie, Joueur joueurCourant) {
         cases[joueurCourant.getPositionCourante()-1].loadImage("/Images/sage_question.png");
-        this.repaint();
+        
         historique.append(reaction+"\n");
         
         if(joueurCourant.getId()==1){
@@ -1192,6 +1195,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             }
         }
         
+        
         if(joueurCourant.getId()==2){
             try {
                 vieJ2.setVie(vie);
@@ -1201,6 +1205,8 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
                 Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
+        
+        this.repaint();
         
         
     }
