@@ -18,6 +18,7 @@ import javax.swing.border.LineBorder;
  * @author gabri
  */
 public class Pirate4 extends javax.swing.JPanel {
+    private boolean is_clicked = false;
 
     /**
      * Creates new form Pirate4
@@ -82,10 +83,22 @@ public class Pirate4 extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
-        if (SwingUtilities.isRightMouseButton(evt)){
-            this.setBorder(new LineBorder(Color.red));
-        }else{
-            this.setBorder(new LineBorder(Color.blue));
+        if (SwingUtilities.isRightMouseButton(evt) && !is_clicked) {
+            this.setBorder(new LineBorder(Color.red, 4));
+            is_clicked = true;
+        }
+        else if (SwingUtilities.isRightMouseButton(evt) && is_clicked) {
+            this.setBorder(new LineBorder(Color.black, 3));
+            is_clicked = false;
+        }
+        else if (SwingUtilities.isLeftMouseButton(evt) && !is_clicked) {
+            is_clicked = true;
+            this.setBorder(new LineBorder(Color.blue, 4));
+        }
+
+        else if (SwingUtilities.isLeftMouseButton(evt) && is_clicked) {
+            this.setBorder(new LineBorder(Color.black, 3));
+            is_clicked = false;
         }
     }//GEN-LAST:event_formMouseClicked
 

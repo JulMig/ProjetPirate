@@ -20,6 +20,8 @@ import javax.swing.border.LineBorder;
  */
 public class Pirate1 extends javax.swing.JPanel {
 
+    boolean is_clicked = false;
+
     /**
      * Creates new form Pirate1
      */
@@ -28,27 +30,25 @@ public class Pirate1 extends javax.swing.JPanel {
         this.setToolTipText("Luna");
         loadImage();
     }
-    
+
     BufferedImage image;
-    
+
     private void loadImage() {
         try {
-           image = ImageIO.read(new File(getClass().getResource("/Images/femme_pirate_1.png").toURI()));
+            image = ImageIO.read(new File(getClass().getResource("/Images/femme_pirate_1.png").toURI()));
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-    
-   
-     
+
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        Graphics2D g2d = (Graphics2D) g;     
+        Graphics2D g2d = (Graphics2D) g;
         if (image != null) {
-            
-             g2d.drawImage(image, 0, 0, getWidth(), getHeight(), this);
-        }      
+            g2d.drawImage(image, 0, 0, getWidth(), getHeight(), this);
+        }
+
     }
 
     /**
@@ -73,28 +73,38 @@ public class Pirate1 extends javax.swing.JPanel {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 394, Short.MAX_VALUE)
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 394, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 294, Short.MAX_VALUE)
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 294, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
-        if (SwingUtilities.isRightMouseButton(evt) && this.getBorder()!= new LineBorder(Color.black)){
-            this.setBorder(new LineBorder(Color.black));
-        }else if(SwingUtilities.isRightMouseButton(evt) && this.getBorder()== new LineBorder(Color.black)){
-            this.setBorder(new LineBorder(Color.red));
-        }else if(SwingUtilities.isLeftMouseButton(evt) && this.getBorder()!= new LineBorder(Color.black)){
-            this.setBorder(new LineBorder(Color.black));
-        }else if(SwingUtilities.isLeftMouseButton(evt) && this.getBorder()== new LineBorder(Color.black)){
-            this.setBorder(new LineBorder(Color.blue));
+
+        if (SwingUtilities.isRightMouseButton(evt) && !is_clicked) {
+            this.setBorder(new LineBorder(Color.red, 4));
+            is_clicked = true;
         }
-    }//GEN-LAST:event_formMouseClicked
+        else if (SwingUtilities.isRightMouseButton(evt) && is_clicked) {
+            this.setBorder(new LineBorder(Color.black, 3));
+            is_clicked = false;
+        }
+        else if (SwingUtilities.isLeftMouseButton(evt) && !is_clicked) {
+            is_clicked = true;
+            this.setBorder(new LineBorder(Color.blue, 4));
+        }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    // End of variables declaration//GEN-END:variables
+        else if (SwingUtilities.isLeftMouseButton(evt) && is_clicked) {
+            this.setBorder(new LineBorder(Color.black, 3));
+            is_clicked = false;
+        }
+    
+
+}//GEN-LAST:event_formMouseClicked
+
+// Variables declaration - do not modify//GEN-BEGIN:variables
+// End of variables declaration//GEN-END:variables
 }
-
