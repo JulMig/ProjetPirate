@@ -33,7 +33,7 @@ public class Pirate2 extends javax.swing.JPanel {
     
     private void loadImage() {
         try {
-            BufferedImage image = ImageIO.read(new File(getClass().getResource("/Images/femme_pirate_2.png").toURI()));
+            image = ImageIO.read(new File(getClass().getResource("/Images/femme_pirate_2.png").toURI()));
         } catch (Exception e) {
             e.printStackTrace();
         }
