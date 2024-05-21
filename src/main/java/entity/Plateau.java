@@ -6,10 +6,12 @@ public class Plateau {
     private CaseNormal[] cases = new CaseNormal[30];
 
     public Plateau(int nbBombe, int nbQCM) {
-        int nbCaseNormal = 30 - (nbBombe + nbQCM);
+        int nbCaseNormal = 28 - (nbBombe + nbQCM);
         Random random = new Random();
         int typeCase;
-        for (int i = 0; i < 30; i++){
+        cases[0] = new CaseNormal();
+        cases[29] = new CaseNormal();
+        for (int i = 1; i < 29; i++){
             
             do{
                 typeCase = random.nextInt(0, 3);
