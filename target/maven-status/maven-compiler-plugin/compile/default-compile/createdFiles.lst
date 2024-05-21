@@ -19,6 +19,7 @@ boundary\IPirates.class
 boundary\AdaptateurNoyauFonctionnel$1.class
 entity\Jeu.class
 boundary\AdaptateurNoyauFonctionnel.class
+dialogue\BarreDeVie.class
 dialogue\Case.class
 entity\Joueur.class
 dialogue\AffichageDes.class
