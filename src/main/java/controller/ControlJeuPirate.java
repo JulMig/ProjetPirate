@@ -26,6 +26,7 @@ public class ControlJeuPirate {
         Joueur[] joueurs = jeu.getJoueurs();
         controlActiverCase.setPlateau(jeu.getPlateau());
         controlVerifierFin.setJoueurs(joueurs[0], joueurs[1]);
+        controlDeplacer.setJeu(jeu);
         indiquerTour();
     }
     
@@ -56,7 +57,7 @@ public class ControlJeuPirate {
          }
  
     }
-    /*
+    
     public static void main(String[] args) {
         ControlActiverCase controlActiverCase = new ControlActiverCase();
         ControlDeplacer controlDeplacer = new ControlDeplacer();
@@ -69,5 +70,5 @@ public class ControlJeuPirate {
         controlJeuPirate.initialiserPartie();
         
     }
-    */
+    
 }
