@@ -32,8 +32,7 @@ public class Pirate4 extends javax.swing.JPanel {
     
     private void loadImage() {
         try {
-            File file = new File("C:\\Users\\gabri\\OneDrive\\Desktop\\imagePirate_projet_ILU4\\pirate_homme_2.png");
-            image = ImageIO.read(file);
+            BufferedImage image = ImageIO.read(new File(getClass().getResource("/Images/pirate_homme_2.png").toURI()));
         } catch (Exception e) {
             e.printStackTrace();
         }

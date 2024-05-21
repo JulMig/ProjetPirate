@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package framePersonnage;
+package dialogue;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -33,8 +33,7 @@ public class Pirate2 extends javax.swing.JPanel {
     
     private void loadImage() {
         try {
-            File file = new File("C:\\Users\\gabri\\OneDrive\\Desktop\\imagePirate_projet_ILU4\\femme_pirate_2.png");
-            image = ImageIO.read(file);
+            BufferedImage image = ImageIO.read(new File(getClass().getResource("/Images/femme_pirate_2.png").toURI()));
         } catch (Exception e) {
             e.printStackTrace();
         }

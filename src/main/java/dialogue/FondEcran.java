@@ -27,8 +27,8 @@ public class FondEcran extends javax.swing.JPanel {
     
     private void loadImage() {
         try {
-            File file = new File("C:\\Users\\gabri\\OneDrive\\Desktop\\imagePirate_projet_ILU4\\fond_ecran_pirate.png");
-            image = ImageIO.read(file);
+                BufferedImage image = ImageIO.read(new File(getClass().getResource("/Images/fond_ecran_pirate.png").toURI()));
+        
         } catch (Exception e) {
             e.printStackTrace();
         }
