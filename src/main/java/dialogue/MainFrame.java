@@ -1113,7 +1113,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
     }
 
     @Override
-    public void deplacerPirate(Joueur joueurCourant, int nbPas) {
+    public void deplacerPirate(int joueurCourant, int nbPas) {
         jeton1.setEnabled(true);
         jeton2.setEnabled(true);
     }

@@ -10,8 +10,8 @@ public class ControlLancerPartie {
 	
     public Jeu initialiserJeu() {
     // Création des joueurs
-	Joueur joueur1 = new Joueur("joueur1",null);
-	Joueur joueur2 = new Joueur("joueur2",null);
+	Joueur joueur1 = new Joueur(1,"joueur1",null);
+	Joueur joueur2 = new Joueur(2,"joueur2",null);
 	        
 	Joueur[] joueurs = {joueur1, joueur2};
 	

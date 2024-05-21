@@ -8,11 +8,18 @@ public class Joueur {
     private int vie = 5;
     private int positionCourante = 1;
     private BufferedImage image;
+    private int id;
             
-    public Joueur(String nom,BufferedImage image) {
+    public Joueur(int id, String nom,BufferedImage image) {
+        this.id = id;
         this.nom = nom;
         this.image = image;
     }
+
+    public int getId() {
+        return id;
+    }
+    
     
     public String getNom() {
         return nom;

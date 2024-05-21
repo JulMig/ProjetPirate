@@ -20,7 +20,7 @@ public interface IBoundary {
 
 	public void setIDeplacerPirate(IDeplacerPirate iDeplacerPirate);
 
-	public void deplacerPirate(Joueur joueurCourant, int nbPas);
+	public void deplacerPirate(int nbPas);
 
 	public void annoncerVainqueur();
 
