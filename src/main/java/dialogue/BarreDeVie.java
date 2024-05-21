@@ -55,20 +55,14 @@ public class BarreDeVie extends javax.swing.JPanel {
         return lstImage.get(hp);
     }
     
-    public void loseHP() throws URISyntaxException, IOException{
-        if(hp>0){
-            hp--;
+    public void setVie(int hp) throws URISyntaxException, IOException{
+            if(hp<=0){
+                hp=0;
+            }
             setImage(lstImage.get(hp));
-        }
+        
     }
-    public void addHP() throws IOException, URISyntaxException{
-        if(hp<lstImage.size()-1){
-            hp++;
-            
-            
-            setImage(lstImage.get(hp));
-        }
-    }
+  
     
     
     @Override

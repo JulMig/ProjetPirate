@@ -4,7 +4,7 @@ public class Jeu {
     private Joueur [] joueurs;
     private int idJoueurCourant = 0;
     
-    private Plateau plateau = new Plateau(0, 28);
+    private Plateau plateau = new Plateau(28, 0);
     
     public Jeu(Joueur[] joueurs) {
         this.joueurs = joueurs;

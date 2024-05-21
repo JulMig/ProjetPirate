@@ -11,10 +11,15 @@ import controller.ControlDeplacer;
 import controller.ControlJeuPirate;
 import controller.ControlLancerPartie;
 import controller.ControlVerifierFin;
+import entity.CaseBombe;
 import entity.Joueur;
 import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.net.URISyntaxException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 import javax.swing.Timer;
@@ -1148,9 +1153,27 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
 
     @Override
     public void caseBombe(int vie, Joueur joueurCourant) {
-        cases[joueurCourant.getPositionCourante()-1].loadImage("/Images/bombe.png");
         this.repaint();
-        historique.append("BOUM !"+joueurCourant.getNom()+"a perdu "+vie+"\n");
+        historique.append("BOUM ! vous êtes tombé sur une bombe... "+joueurCourant.getNom()+" a actuellement "+vie+" points de vie.\n");
+        if(joueurCourant.getId()==1){
+            try {
+                vieJ1.setVie(vie);
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IOException ex) {
+                Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        
+        if(joueurCourant.getId()==2){
+            try {
+                vieJ2.setVie(vie);
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IOException ex) {
+                Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
     }
 
     @Override
