@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package frameMenu;
+package dialogue;
 
 import java.awt.BorderLayout;
 import javax.swing.ImageIcon;
@@ -32,11 +32,11 @@ public class MenuFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        fondEcran1 = new framePersonnage.FondEcran();
-        pirate12 = new framePersonnage.Pirate1();
-        pirate21 = new framePersonnage.Pirate2();
-        pirate31 = new framePersonnage.Pirate3();
-        pirate41 = new framePersonnage.Pirate4();
+        fondEcran1 = new dialogue.FondEcran();
+        pirate12 = new dialogue.Pirate1();
+        pirate21 = new dialogue.Pirate2();
+        pirate31 = new dialogue.Pirate3();
+        pirate41 = new dialogue.Pirate4();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -226,15 +226,15 @@ public class MenuFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private framePersonnage.FondEcran fondEcran1;
+    private dialogue.FondEcran fondEcran1;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private framePersonnage.Pirate1 pirate12;
-    private framePersonnage.Pirate2 pirate21;
-    private framePersonnage.Pirate3 pirate31;
-    private framePersonnage.Pirate4 pirate41;
+    private dialogue.Pirate1 pirate12;
+    private dialogue.Pirate2 pirate21;
+    private dialogue.Pirate3 pirate31;
+    private dialogue.Pirate4 pirate41;
     // End of variables declaration//GEN-END:variables
 }
