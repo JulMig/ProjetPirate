@@ -27,10 +27,11 @@ public class Case extends javax.swing.JPanel {
     }
     
     
-    private void loadImage(String path) {
+    protected void loadImage(String path) {
         try {
             File file = new File(getClass().getResource(path).toURI());
             image = ImageIO.read(file);
+            repaint();
         } catch (Exception e) {
             e.printStackTrace();
         }

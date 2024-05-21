@@ -5,7 +5,6 @@
 package dialogue;
 
 import boundary.AdaptateurNoyauFonctionnel;
-import boundary.BoundaryJeuPirate;
 import boundary.IPirates;
 import controller.ControlActiverCase;
 import controller.ControlDeplacer;
@@ -16,10 +15,7 @@ import entity.Joueur;
 import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.image.BufferedImage;
-import java.io.IOException;
-import java.net.URISyntaxException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 import javax.swing.Timer;
 
@@ -66,6 +62,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
         cases[27] = case28;
         cases[28] = case29;
         cases[29] = case30;
+        cases[29].loadImage("/Images/case.png");
         
         for(int i = 1; i<=30; i++){
             cases[i-1].setNumCase(i);
@@ -1117,8 +1114,10 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
     @Override
     public void afficherDes(int val1, int val2) {
         affichageDes1.Afficher(val1, val2);
+        int res = val1 + val2;
         jButton1.setEnabled(false);
         timer = new Timer(3000, (ActionEvent e) -> {
+                    historique.append("Résultat : "+res+"\n");
                     affichageDes1.setVisible(false);
                     timer.stop();
         });
@@ -1149,21 +1148,31 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
 
     @Override
     public void caseBombe(int vie, Joueur joueurCourant) {
-        historique.append("BOUM ! \n");    
+        cases[joueurCourant.getPositionCourante()-1].loadImage("/Images/bombe.png");
+        this.repaint();
+        historique.append("BOUM !"+joueurCourant.getNom()+"a perdu "+vie+"\n");
     }
 
     @Override
     public void caseQuestion(String reaction, int vie, Joueur joueurCourant) {
-        historique.append("Question ? \n");    
+        cases[joueurCourant.getPositionCourante()-1].loadImage("/Images/sage_question.png");
+        this.repaint();
+        historique.append(reaction+"\n");
     }
 
     @Override
     public int poserQuestion(int numCase, String question, String reponse1, String reponse2) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        String[] reponses = {reponse1, reponse2};
+        int reponse;
+        do{
+            reponse = JOptionPane.showOptionDialog(this, question,"Question",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE,null, reponses,null);
+        }while(reponse == -1);
+        System.out.println("Reponse :"+reponse+" "+reponses[reponse]);
+        return reponse;
     }
 
     @Override
     public void annoncerVainqueur(String nomVainqueur) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        int reponse = JOptionPane.showConfirmDialog(this, "La partie est fini le vainquer est "+nomVainqueur,"Finde la partie",JOptionPane.DEFAULT_OPTION,JOptionPane.INFORMATION_MESSAGE,null);
     }
 }
