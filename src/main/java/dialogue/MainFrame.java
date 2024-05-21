@@ -1040,7 +1040,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             System.out.println(controlJeuPirate);
             boundary.setControlJeuPirate(controlJeuPirate);
             System.out.println(controlJeuPirate);
-            controlJeuPirate.initialiserPartie();
+            controlJeuPirate.initialiserPartie("1","2",null,null);
         });
         
     }   

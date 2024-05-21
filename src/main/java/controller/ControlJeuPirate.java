@@ -1,6 +1,7 @@
 package controller;
 import entity.*;
 import boundary.*;
+import java.awt.image.BufferedImage;
 
 public class ControlJeuPirate {
     private ControlActiverCase controlActiverCase;
@@ -20,8 +21,8 @@ public class ControlJeuPirate {
         this.boundary = boundary;
     }
     
-    public void initialiserPartie(){
-        jeu = controlLancerPartie.initialiserJeu();
+    public void initialiserPartie(String j1Name, String j2Name, BufferedImage j1, BufferedImage j2){
+        jeu = controlLancerPartie.initialiserJeu(j1Name, j2Name, j1, j2);
         boundary.setControlJeuPirate(this);
         Joueur[] joueurs = jeu.getJoueurs();
         controlActiverCase.setPlateau(jeu.getPlateau());
@@ -58,7 +59,7 @@ public class ControlJeuPirate {
          }
  
     }
-    
+    /*
     public static void main(String[] args) {
         ControlActiverCase controlActiverCase = new ControlActiverCase();
         ControlDeplacer controlDeplacer = new ControlDeplacer();
@@ -68,8 +69,8 @@ public class ControlJeuPirate {
         BoundaryJeuPirate boundary = new BoundaryJeuPirate();
         
         ControlJeuPirate controlJeuPirate = new ControlJeuPirate(controlActiverCase, controlDeplacer, controlLancerPartie, controlVerifierFin, boundary);
-        controlJeuPirate.initialiserPartie();
+        controlJeuPirate.initialiserPartie("joueur1","joueur2",null,null);
         
     }
-    
+    */
 }
