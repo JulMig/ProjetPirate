@@ -1181,6 +1181,28 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
         cases[joueurCourant.getPositionCourante()-1].loadImage("/Images/sage_question.png");
         this.repaint();
         historique.append(reaction+"\n");
+        
+        if(joueurCourant.getId()==1){
+            try {
+                vieJ1.setVie(vie);
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IOException ex) {
+                Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        
+        if(joueurCourant.getId()==2){
+            try {
+                vieJ2.setVie(vie);
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IOException ex) {
+                Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        
+        
     }
 
     @Override
