@@ -31,7 +31,7 @@ import javax.swing.border.LineBorder;
  */
 public class MenuFrame extends javax.swing.JFrame {
     
-    public JPanel[] tableau = new JPanel[2];
+    public PirateSelection[] tableau = new PirateSelection[2];
 
     /**
      * Creates new form MenuFrame
@@ -55,10 +55,10 @@ public class MenuFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         fondEcran1 = new dialogue.FondEcran();
-        pirate12 = new dialogue.Pirate1();
-        pirate21 = new dialogue.Pirate2();
-        pirate31 = new dialogue.Pirate3();
-        pirate41 = new dialogue.Pirate4();
+        pirate12 = new dialogue.PirateSelection("/Images/femme_pirate_1.png", "Luna L'Impitoyable");
+        pirate21 = new dialogue.PirateSelection("/Images/femme_pirate_2.png", "Aria L'Ecarlate");
+        pirate31 = new dialogue.PirateSelection("/Images/homme_pirate_1.png", "William L'Ecorcheur");
+        pirate41 = new dialogue.PirateSelection("/Images/pirate_homme_2.png", "Callie O'Jack");
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -233,15 +233,15 @@ public class MenuFrame extends javax.swing.JFrame {
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         if (tableau[0] != null && tableau[1] != null && tableau[0] != tableau[1]){
-            BufferedImage j1Image;
-            BufferedImage j2Image;
-            String j1Nom;
-            String j2Nom;
+            BufferedImage j1Image = tableau[0].getImage();
+            BufferedImage j2Image = tableau[1].getImage();
+            String j1Nom = tableau[0].getNom();
+            String j2Nom = tableau[1].getNom();
             
             
             
             this.setVisible(false);
-            lancerJeu("","",null,null);
+            lancerJeu(j1Nom,j2Nom,j1Image,j2Image);
         
         }
         
@@ -338,7 +338,7 @@ public class MenuFrame extends javax.swing.JFrame {
             System.out.println(controlJeuPirate);
             boundary.setControlJeuPirate(controlJeuPirate);
             System.out.println(controlJeuPirate);
-            controlJeuPirate.initialiserPartie("1","2",null,null);
+            controlJeuPirate.initialiserPartie(j1Name,j2Name,j1,j2);
             this.dispose();
         });
     }
@@ -390,9 +390,9 @@ public class MenuFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private dialogue.Pirate1 pirate12;
-    private dialogue.Pirate2 pirate21;
-    private dialogue.Pirate3 pirate31;
-    private dialogue.Pirate4 pirate41;
+    private dialogue.PirateSelection pirate12;
+    private dialogue.PirateSelection pirate21;
+    private dialogue.PirateSelection pirate31;
+    private dialogue.PirateSelection pirate41;
     // End of variables declaration//GEN-END:variables
 }

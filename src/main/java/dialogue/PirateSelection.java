@@ -7,6 +7,7 @@ package dialogue;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import javax.imageio.ImageIO;
@@ -17,39 +18,49 @@ import javax.swing.border.LineBorder;
  *
  * @author gabri
  */
-public class Pirate4 extends javax.swing.JPanel {
-    private boolean is_clicked = false;
+public class PirateSelection extends javax.swing.JPanel {
+
+    boolean is_clicked = false;
+    String nom;
 
     /**
-     * Creates new form Pirate4
+     * Creates new form Pirate1
      */
-    public Pirate4() {
+    public PirateSelection(String imagePath, String nom) {
         initComponents();
-        this.setToolTipText("Callic");
-        loadImage();
+        this.nom = nom;
+        this.setToolTipText(nom);
+        loadImage(imagePath);
     }
-    
+
     BufferedImage image;
-    
-    private void loadImage() {
+
+    private void loadImage(String imagePath) {
         try {
-            image = ImageIO.read(new File(getClass().getResource("/Images/pirate_homme_2.png").toURI()));
+            image = ImageIO.read(new File(getClass().getResource(imagePath).toURI()));
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
     
-   
-     
+    protected BufferedImage getImage(){
+        return image;
+    }
+    
+    protected String getNom(){
+        return nom;
+    }
+
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        Graphics2D g2d = (Graphics2D) g;     
+        Graphics2D g2d = (Graphics2D) g;
         if (image != null) {
-            
-             g2d.drawImage(image, 0, 0, getWidth(), getHeight(), this);
-        }      
+            g2d.drawImage(image, 0, 0, getWidth(), getHeight(), this);
+        }
+
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -61,24 +72,23 @@ public class Pirate4 extends javax.swing.JPanel {
 
         setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        setMaximumSize(new java.awt.Dimension(170, 170));
-        setMinimumSize(new java.awt.Dimension(170, 1701));
+        setMaximumSize(new java.awt.Dimension(165, 170));
         setPreferredSize(new java.awt.Dimension(170, 170));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 394, Short.MAX_VALUE)
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 394, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1695, Short.MAX_VALUE)
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 294, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    // End of variables declaration//GEN-END:variables
+// Variables declaration - do not modify//GEN-BEGIN:variables
+// End of variables declaration//GEN-END:variables
 }
