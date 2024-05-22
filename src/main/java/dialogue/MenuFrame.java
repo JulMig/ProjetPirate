@@ -327,12 +327,20 @@ public class MenuFrame extends javax.swing.JFrame {
             ControlVerifierFin controlVerifierFin = new ControlVerifierFin();
             
             AdaptateurNoyauFonctionnel boundary = new AdaptateurNoyauFonctionnel();
-            MainFrame m = new MainFrame();
-            m.setVisible(true);
-            m.setAdaptateur(boundary);
-            System.out.println(m);
-            boundary.setiPirates(m);
-            m.initPirateImages(j1, j2);
+            MainFrame m;
+            try {
+                m = new MainFrame();
+                m.setVisible(true);
+                m.setAdaptateur(boundary);
+                System.out.println(m);
+                boundary.setiPirates(m);
+                m.initPirateImages(j1, j2, j1Name, j2Name);
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(MenuFrame.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IOException ex) {
+                Logger.getLogger(MenuFrame.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
             
             ControlJeuPirate controlJeuPirate = new ControlJeuPirate(controlActiverCase, controlDeplacer, controlLancerPartie, controlVerifierFin, boundary);
             System.out.println(controlJeuPirate);
