@@ -1114,6 +1114,7 @@ public class MainFrame extends javax.swing.JFrame{
         posPirate1 = jeton1.getLocation();
         posPirate2 = jeton2.getLocation();
         imageJoueurCourant.setImagePirate(image);
+        repaint();
     }
 
     
