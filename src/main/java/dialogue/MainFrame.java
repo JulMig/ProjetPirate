@@ -966,15 +966,21 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             moveJeton(jeton1, evt.getPoint());
     }//GEN-LAST:event_jeton1MouseDragged
 
+    Point posPirate1;
+    Point posPirate2;    
     private void jeton1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jeton1MouseReleased
         if(jeton1.isEnabled()){
-            adaptateur.verifierDeplacement(inCase(jeton1));
+            if(!adaptateur.verifierDeplacement(inCase(jeton1))){
+                jeton1.setLocation(posPirate1);
+            }
         }
     }//GEN-LAST:event_jeton1MouseReleased
 
     private void jeton2MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jeton2MouseReleased
         if(jeton2.isEnabled()){
-            adaptateur.verifierDeplacement(inCase(jeton2));
+            if(!adaptateur.verifierDeplacement(inCase(jeton2))){
+                    jeton2.setLocation(posPirate2);
+            }
         }
     }//GEN-LAST:event_jeton2MouseReleased
     
@@ -988,9 +994,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
     private void moveJeton(Jeton jeton, Point p){
         Point pos = SwingUtilities.convertPoint(jeton, p, Plateauihm);
         pos.setLocation(pos.getX() - (jeton.getWidth()/2), pos.getY() - (jeton.getHeight()/2));
-        jeton.setLocation(pos);        
-        
-        
+        jeton.setLocation(pos);         
     }
     
     private int inCase(Jeton jeton){
@@ -1125,6 +1129,8 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
     @Override
     public void indiquerTour(BufferedImage image, String nomPirate) {
         historique.append(nomPirate+" est en train de jouer ! \n");
+        posPirate1 = jeton1.getLocation();
+        posPirate2 = jeton2.getLocation();
     }
 
     @Override

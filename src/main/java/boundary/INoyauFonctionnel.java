@@ -5,7 +5,7 @@ import entity.Joueur;
 public interface INoyauFonctionnel {
 	public void finLancerDes();
 	
-	public void verifierDeplacement(int caseArrivee);
+	public boolean verifierDeplacement(int caseArrivee);
 	
     
 }

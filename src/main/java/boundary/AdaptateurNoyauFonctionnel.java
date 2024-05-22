@@ -117,11 +117,10 @@ public class AdaptateurNoyauFonctionnel implements INoyauFonctionnel, IBoundary 
         
 
     @Override
-    public void verifierDeplacement(int caseArrivee) {
+    public boolean verifierDeplacement(int caseArrivee) {
             Joueur joueurCourant = iDeplacerPirate.getJoueurCourant();
             int nbPas = iDeplacerPirate.getNouvellePositionJoueurCourant();
             boolean deplacement = iDeplacerPirate.verifierDeplacement(joueurCourant, nbPas, caseArrivee);
-            
                 
             if (!deplacement) {
                     deplacerPirate(nbPas);
@@ -130,6 +129,7 @@ public class AdaptateurNoyauFonctionnel implements INoyauFonctionnel, IBoundary 
                     controlJeuPirate.finDeplacement(iDeplacerPirate.deplacerPirate(joueurCourant, nbPas));
                     this.iDeplacerPirate = null;
             }
+            return deplacement;
     }
         
     public void setiPirates(IPirates iPirates) {
