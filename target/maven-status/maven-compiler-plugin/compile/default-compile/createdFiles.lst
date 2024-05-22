@@ -4,9 +4,9 @@ dialogue\MainFrame.class
 controller\ControlLancerPartie.class
 dialogue\MainFrame$2.class
 dialogue\MainFrame$6.class
-dialogue\ImagePiratePanel.class
 boundary\BoundaryJeuPirate.class
 entity\De.class
+dialogue\ImagePirate.class
 dialogue\move.class
 dialogue\MenuFrame$6.class
 controller\IVerifierFin.class

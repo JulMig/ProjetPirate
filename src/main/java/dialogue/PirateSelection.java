@@ -29,12 +29,20 @@ public class PirateSelection extends javax.swing.JPanel {
     public PirateSelection(String imagePath, String nom) {
         initComponents();
         this.nom = nom;
+        this.path = imagePath;
         this.setToolTipText(nom);
         loadImage(imagePath);
     }
 
     BufferedImage image;
+    String path;
 
+    public String getPath() {
+        return path;
+    }
+
+    
+    
     private void loadImage(String imagePath) {
         try {
             image = ImageIO.read(new File(getClass().getResource(imagePath).toURI()));
