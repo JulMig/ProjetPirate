@@ -1022,7 +1022,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
         //</editor-fold>
 
         /* Create and display the form  LAMBAAAA*/
-        /*
+        
         java.awt.EventQueue.invokeLater(() -> {
             ControlActiverCase controlActiverCase = new ControlActiverCase();
             ControlDeplacer controlDeplacer = new ControlDeplacer();
@@ -1042,7 +1042,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             System.out.println(controlJeuPirate);
             controlJeuPirate.initialiserPartie("1","2",null,null);
         });
-        */
+        
     }
     
 
@@ -1156,7 +1156,8 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
     public void caseBombe(int vie, Joueur joueurCourant) {
         cases[joueurCourant.getPositionCourante()-1].loadImage("/Images/bombe.png");
         
-        historique.append("BOUM ! vous êtes tombé sur une bombe... "+joueurCourant.getNom()+" a actuellement "+vie+" points de vie.\n");
+        historique.append("BOUM ! vous êtes tombé sur une bombe...\n");
+         historique.append("Joueur "+joueurCourant.getNom()+" a actuellement "+vie+" points de vie.\n");
         if(joueurCourant.getId()==1){
             try {
                 vieJ1.setVie(vie);
@@ -1185,6 +1186,8 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
         cases[joueurCourant.getPositionCourante()-1].loadImage("/Images/sage_question.png");
         
         historique.append(reaction+"\n");
+         historique.append("Joueur "+joueurCourant.getNom()+" a actuellement "+vie+" points de vie.\n");
+        
         
         if(joueurCourant.getId()==1){
             try {
@@ -1219,7 +1222,6 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
         do{
             reponse = JOptionPane.showOptionDialog(this, question,"Question",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE,null, reponses,null);
         }while(reponse == -1);
-        System.out.println("Reponse :"+reponse+" "+reponses[reponse]);
         return reponse;
     }
 
