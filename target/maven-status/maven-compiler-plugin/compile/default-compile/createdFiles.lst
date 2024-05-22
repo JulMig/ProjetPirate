@@ -43,6 +43,7 @@ dialogue\FondEcran.class
 dialogue\move$3.class
 controller\ControlDeplacer.class
 entity\TypeCase.class
+boundary\ImagePiratePanel.class
 controller\ControlVerifierFin.class
 entity\CaseBombe.class
 boundary\IBoundary.class
