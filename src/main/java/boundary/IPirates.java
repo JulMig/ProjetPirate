@@ -12,8 +12,6 @@ public interface IPirates {
 	
 	public void afficherDes(int val1,int val2);
 	
-	public void debloquerDeplacement(int caseCourante,Joueur joueur);
-	
 	public void bloquerJetons();
 	
 	public void deplacerPirate(int joueurCourant);

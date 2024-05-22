@@ -30,7 +30,7 @@ import javax.swing.Timer;
  *
  * @author ASUS
  */
-public class MainFrame extends javax.swing.JFrame implements IPirates{
+public class MainFrame extends javax.swing.JFrame{
 
     /**
      * Creates new form main
@@ -958,8 +958,8 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
     }//GEN-LAST:event_jMenu2MouseClicked
 
  
-    public void setAdaptateur(AdaptateurNoyauFonctionnel adaptateur) {
-        this.adaptateur = adaptateur;
+    public void setDialog(Dialog dialog) {
+        this.dialog = dialog;
     }
     
     
@@ -967,7 +967,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         if(jButton1.isEnabled()){
             affichageDes1.setVisible(true);
-            adaptateur.finLancerDes();
+            dialog.finLancerDes();
         }  
     }//GEN-LAST:event_jButton1MouseClicked
 
@@ -986,7 +986,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
     Point posPirate2;    
     private void jeton1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jeton1MouseReleased
         if(jeton1.isEnabled()){
-            if(!adaptateur.verifierDeplacement(inCase(jeton1))){
+            if(!dialog.verifierDeplacement(inCase(jeton1))){
                 jeton1.setLocation(posPirate1);
             }
         }
@@ -994,7 +994,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
 
     private void jeton2MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jeton2MouseReleased
         if(jeton2.isEnabled()){
-            if(!adaptateur.verifierDeplacement(inCase(jeton2))){
+            if(!dialog.verifierDeplacement(inCase(jeton2))){
                     jeton2.setLocation(posPirate2);
             }
         }
@@ -1088,12 +1088,8 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
         jButton1.setEnabled(true);
     }
     
-    
-    public void debloquerDeplacement(int caseActuelle, Joueur joueurActuel){
-        
-    } 
     Timer timer;
-    AdaptateurNoyauFonctionnel adaptateur;
+    Dialog dialog;
     private Case[] cases = new Case[30];
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Plateauihm;
@@ -1152,7 +1148,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
     private dialogue.BarreDeVie vieJ2;
     // End of variables declaration//GEN-END:variables
 
-    @Override
+    
     public void indiquerTour(BufferedImage image, String nomPirate) {
         historique.append(nomPirate+" est en train de jouer ! \n");
         posPirate1 = jeton1.getLocation();
@@ -1160,7 +1156,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
         imagePirate3.setImagePirate(image);
     }
 
-    @Override
+    
     public void afficherDes(int val1, int val2) {
         affichageDes1.Afficher(val1, val2);
         int res = val1 + val2;
@@ -1174,14 +1170,14 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
         timer.start();
     }
 
-    @Override
+    
     public void bloquerJetons() {
         jeton1.setEnabled(false);
         jeton2.setEnabled(false);
         
     }
 
-    @Override
+    
     public void deplacerPirate(int joueurCourant) {
         if(joueurCourant == 1){
             jeton1.setEnabled(true);
@@ -1190,18 +1186,18 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
         }
     }
 
-    @Override
+    
     public void caseNormale() {
         historique.append("Rien ne se passe \n");
     }
 
-    @Override
-    public void caseBombe(int vie, Joueur joueurCourant) {
-        cases[joueurCourant.getPositionCourante()-1].loadImage("/Images/bombe.png");
+   
+    public void caseBombe(int vie, int joueurCourant, String nom, int pos) {
+        cases[pos-1].loadImage("/Images/bombe.png");
         
         historique.append("BOUM ! vous êtes tombé sur une bombe...\n");
-         historique.append("Joueur "+joueurCourant.getNom()+" a actuellement "+vie+" points de vie.\n");
-        if(joueurCourant.getId()==1){
+        historique.append("Joueur "+nom+" a actuellement "+vie+" points de vie.\n");
+        if(joueurCourant==1){
             try {
                 vieJ1.setVie(vie);
             } catch (URISyntaxException ex) {
@@ -1211,7 +1207,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             }
         }
         
-        if(joueurCourant.getId()==2){
+        if(joueurCourant==2){
             try {
                 vieJ2.setVie(vie);
             } catch (URISyntaxException ex) {
@@ -1224,15 +1220,14 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
         this.repaint();
     }
 
-    @Override
-    public void caseQuestion(String reaction, int vie, Joueur joueurCourant) {
-        cases[joueurCourant.getPositionCourante()-1].loadImage("/Images/sage_question.png");
+    public void caseQuestion(String reaction, int vie, int joueurCourant, int pos, String nom) {
+        cases[pos-1].loadImage("/Images/sage_question.png");
         
         historique.append(reaction+"\n");
-         historique.append("Joueur "+joueurCourant.getNom()+" a actuellement "+vie+" points de vie.\n");
+         historique.append("Joueur "+nom+" a actuellement "+vie+" points de vie.\n");
         
         
-        if(joueurCourant.getId()==1){
+        if(joueurCourant==1){
             try {
                 vieJ1.setVie(vie);
             } catch (URISyntaxException ex) {
@@ -1243,7 +1238,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
         }
         
         
-        if(joueurCourant.getId()==2){
+        if(joueurCourant==2){
             try {
                 vieJ2.setVie(vie);
             } catch (URISyntaxException ex) {
@@ -1258,7 +1253,6 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
         
     }
 
-    @Override
     public int poserQuestion(int numCase, String question, String reponse1, String reponse2) {
         String[] reponses = {reponse1, reponse2};
         int reponse;
@@ -1268,7 +1262,6 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
         return reponse;
     }
 
-    @Override
     public void annoncerVainqueur(String nomVainqueur) {
         int reponse = JOptionPane.showConfirmDialog(this, "La partie est fini le vainquer est "+nomVainqueur,"Finde la partie",JOptionPane.DEFAULT_OPTION,JOptionPane.INFORMATION_MESSAGE,null);
         

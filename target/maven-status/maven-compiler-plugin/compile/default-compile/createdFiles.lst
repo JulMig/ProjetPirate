@@ -48,4 +48,5 @@ controller\ControlVerifierFin.class
 entity\CaseBombe.class
 boundary\IBoundary.class
 controller\ControlActiverCase.class
+dialogue\Dialog.class
 dialogue\MenuFrame$5.class

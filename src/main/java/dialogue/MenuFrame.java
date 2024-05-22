@@ -328,13 +328,17 @@ public class MenuFrame extends javax.swing.JFrame {
             
             AdaptateurNoyauFonctionnel boundary = new AdaptateurNoyauFonctionnel();
             MainFrame m;
+            Dialog d;
             try {
+                d = new Dialog();
                 m = new MainFrame();
                 m.setVisible(true);
-                m.setAdaptateur(boundary);
+                m.setDialog(d);
                 System.out.println(m);
-                boundary.setiPirates(m);
+                boundary.setiPirates(d);
                 m.initPirateImages(j1, j2, j1Name, j2Name);
+                d.setAdaptateur(boundary);
+                d.setFrame(m);
             } catch (URISyntaxException ex) {
                 Logger.getLogger(MenuFrame.class.getName()).log(Level.SEVERE, null, ex);
             } catch (IOException ex) {
