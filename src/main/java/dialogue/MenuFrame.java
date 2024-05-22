@@ -237,12 +237,10 @@ public class MenuFrame extends javax.swing.JFrame {
             BufferedImage j2Image = tableau[1].getImage();
             String j1Nom = tableau[0].getNom();
             String j2Nom = tableau[1].getNom();
-            String path1 = tableau[0].getPath();
-            String path2 = tableau[1].getPath();
             
             
             this.setVisible(false);
-            lancerJeu(j1Nom,j2Nom,j1Image,j2Image,path1, path2);
+            lancerJeu(j1Nom,j2Nom,j1Image,j2Image);
         
         }
         
@@ -321,7 +319,7 @@ public class MenuFrame extends javax.swing.JFrame {
         }
     }
     
-    public void lancerJeu(String j1Name, String j2Name, BufferedImage j1, BufferedImage j2, String path1, String path2){
+    public void lancerJeu(String j1Name, String j2Name, BufferedImage j1, BufferedImage j2){
         java.awt.EventQueue.invokeLater(() -> {
             ControlActiverCase controlActiverCase = new ControlActiverCase();
             ControlDeplacer controlDeplacer = new ControlDeplacer();
@@ -334,7 +332,7 @@ public class MenuFrame extends javax.swing.JFrame {
             m.setAdaptateur(boundary);
             System.out.println(m);
             boundary.setiPirates(m);
-            m.initPirateImages(path1, path2);
+            m.initPirateImages(j1, j2);
             
             ControlJeuPirate controlJeuPirate = new ControlJeuPirate(controlActiverCase, controlDeplacer, controlLancerPartie, controlVerifierFin, boundary);
             System.out.println(controlJeuPirate);

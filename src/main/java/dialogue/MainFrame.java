@@ -278,19 +278,21 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(imagePirate2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(imagePirate2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(vieJ2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addGap(35, 35, 35)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(vieJ2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -305,6 +307,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
         );
 
         affichageDes1.setBackground(new java.awt.Color(102, 102, 102));
+        affichageDes1.setOpaque(false);
         affichageDes1.setPreferredSize(new java.awt.Dimension(269, 118));
 
         javax.swing.GroupLayout affichageDes1Layout = new javax.swing.GroupLayout(affichageDes1);
@@ -319,7 +322,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
         );
 
         jLayeredPane1.add(affichageDes1);
-        affichageDes1.setBounds(279, 244, 269, 118);
+        affichageDes1.setBounds(200, 120, 269, 118);
 
         jeton2.setPreferredSize(new java.awt.Dimension(40, 40));
         jeton2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -1008,9 +1011,9 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
         return -1;
     }
     
-    protected void initPirateImages(String path1, String path2){
-        imagePirate1.setImagePirate(path1);
-        imagePirate2.setImagePirate(path2);
+    protected void initPirateImages(BufferedImage i1, BufferedImage i2){
+        imagePirate1.setImagePirate(i1);
+        imagePirate2.setImagePirate(i2);
     }
     
     /**

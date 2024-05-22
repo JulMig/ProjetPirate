@@ -37,12 +37,8 @@ public class ImagePirate extends javax.swing.JPanel {
         }
     }
     
-    public void setImagePirate(String path) {
-       try {
-        image = ImageIO.read(new File(getClass().getResource(path).toURI()));
-    } catch (URISyntaxException | IOException e) {
-        System.out.println("Erreur lors du chargement de l'image initiale: " + e.getMessage());
-    }
+    public void setImagePirate(BufferedImage image) {
+        this.image = image;
     }
     
     @SuppressWarnings("unchecked")
