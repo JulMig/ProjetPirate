@@ -33,7 +33,6 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
     /**
      * Creates new form main
      */
-    MenuFrame menu;
     public MainFrame() {
         initComponents();
         initJetons();
@@ -77,10 +76,6 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
    
         jeton1.setLocation(15, 15);
         jeton2.setLocation(50, 50);
-    }
-
-    public void setMenuFrame(MenuFrame m){
-        this.menu = m;
     }
     
     /**
@@ -933,11 +928,20 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
     }//GEN-LAST:event_jMenu1MouseClicked
 
     private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
-        // TODO add your handling code here:
+        SwingUtilities.invokeLater(() -> {
+            try {
+                new MenuFrame().setVisible(true);
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IOException ex) {
+                Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        });
+        this.dispose();
     }//GEN-LAST:event_jMenu2MouseClicked
 
     
-
+ 
     public void setAdaptateur(AdaptateurNoyauFonctionnel adaptateur) {
         this.adaptateur = adaptateur;
     }
@@ -1234,7 +1238,16 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
     @Override
     public void annoncerVainqueur(String nomVainqueur) {
         int reponse = JOptionPane.showConfirmDialog(this, "La partie est fini le vainquer est "+nomVainqueur,"Finde la partie",JOptionPane.DEFAULT_OPTION,JOptionPane.INFORMATION_MESSAGE,null);
-        menu.setVisible(true);
+        
+        SwingUtilities.invokeLater(() -> {
+            try {
+                new MenuFrame().setVisible(true);
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IOException ex) {
+                Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        });
         this.dispose();
     }
 }
