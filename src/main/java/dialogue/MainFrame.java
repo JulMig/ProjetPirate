@@ -4,15 +4,6 @@
  */
 package dialogue;
 
-import boundary.AdaptateurNoyauFonctionnel;
-import boundary.IPirates;
-import controller.ControlActiverCase;
-import controller.ControlDeplacer;
-import controller.ControlJeuPirate;
-import controller.ControlLancerPartie;
-import controller.ControlVerifierFin;
-import entity.CaseBombe;
-import entity.Joueur;
 import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.image.BufferedImage;
@@ -28,12 +19,14 @@ import javax.swing.Timer;
 
 /**
  *
- * @author ASUS
+ * @author Gabriel,Julie,Louis,Yoann,Dina,Mariama
  */
 public class MainFrame extends javax.swing.JFrame{
 
     /**
      * Creates new form main
+     * @throws java.net.URISyntaxException
+     * @throws java.io.IOException
      */
     public MainFrame() throws URISyntaxException, IOException {
         initComponents();
@@ -948,9 +941,7 @@ public class MainFrame extends javax.swing.JFrame{
         SwingUtilities.invokeLater(() -> {
             try {
                 new MenuFrame().setVisible(true);
-            } catch (URISyntaxException ex) {
-                Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (IOException ex) {
+            } catch (URISyntaxException | IOException ex) {
                 Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
             }
         });
@@ -1046,40 +1037,9 @@ public class MainFrame extends javax.swing.JFrame{
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form  LAMBAAAA*/
-        
-        /*java.awt.EventQueue.invokeLater(() -> {
-            ControlActiverCase controlActiverCase = new ControlActiverCase();
-            ControlDeplacer controlDeplacer = new ControlDeplacer();
-            ControlLancerPartie controlLancerPartie = new ControlLancerPartie();
-            ControlVerifierFin controlVerifierFin = new ControlVerifierFin();
-            
-            AdaptateurNoyauFonctionnel boundary = new AdaptateurNoyauFonctionnel();
-            MainFrame m = new MainFrame();
-            m.setVisible(true);
-            m.setAdaptateur(boundary);
-            System.out.println(m);
-            boundary.setiPirates(m);
-            
-            ControlJeuPirate controlJeuPirate = new ControlJeuPirate(controlActiverCase, controlDeplacer, controlLancerPartie, controlVerifierFin, boundary);
-            System.out.println(controlJeuPirate);
-            boundary.setControlJeuPirate(controlJeuPirate);
-            System.out.println(controlJeuPirate);
-            controlJeuPirate.initialiserPartie("1","2",null,null);
-        });*/
-        
+        }        
     }
     
 
@@ -1200,9 +1160,7 @@ public class MainFrame extends javax.swing.JFrame{
         if(joueurCourant==1){
             try {
                 vieJ1.setVie(vie);
-            } catch (URISyntaxException ex) {
-                Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (IOException ex) {
+            } catch (URISyntaxException | IOException ex) {
                 Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
@@ -1210,9 +1168,7 @@ public class MainFrame extends javax.swing.JFrame{
         if(joueurCourant==2){
             try {
                 vieJ2.setVie(vie);
-            } catch (URISyntaxException ex) {
-                Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (IOException ex) {
+            } catch (URISyntaxException | IOException ex) {
                 Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
@@ -1230,9 +1186,7 @@ public class MainFrame extends javax.swing.JFrame{
         if(joueurCourant==1){
             try {
                 vieJ1.setVie(vie);
-            } catch (URISyntaxException ex) {
-                Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (IOException ex) {
+            } catch (URISyntaxException | IOException ex) {
                 Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
@@ -1241,9 +1195,7 @@ public class MainFrame extends javax.swing.JFrame{
         if(joueurCourant==2){
             try {
                 vieJ2.setVie(vie);
-            } catch (URISyntaxException ex) {
-                Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (IOException ex) {
+            } catch (URISyntaxException | IOException ex) {
                 Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
@@ -1263,14 +1215,12 @@ public class MainFrame extends javax.swing.JFrame{
     }
 
     public void annoncerVainqueur(String nomVainqueur) {
-        int reponse = JOptionPane.showConfirmDialog(this, nomVainqueur+" à vaincu son adversaire ! Bravo au nouveau capitaine !","Fin de la partie",JOptionPane.DEFAULT_OPTION,JOptionPane.INFORMATION_MESSAGE,null);
+        JOptionPane.showConfirmDialog(this, nomVainqueur+" à vaincu son adversaire ! Bravo au nouveau capitaine !","Fin de la partie",JOptionPane.DEFAULT_OPTION,JOptionPane.INFORMATION_MESSAGE,null);
         
         SwingUtilities.invokeLater(() -> {
             try {
                 new MenuFrame().setVisible(true);
-            } catch (URISyntaxException ex) {
-                Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (IOException ex) {
+            } catch (URISyntaxException | IOException ex) {
                 Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
             }
         });

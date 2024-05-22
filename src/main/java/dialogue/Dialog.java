@@ -4,11 +4,10 @@ import boundary.AdaptateurNoyauFonctionnel;
 import boundary.IPirates;
 import entity.Joueur;
 import java.awt.image.BufferedImage;
-import javax.swing.JFrame;
 
 /**
  *
- * @author all
+ * @author Julie,Louis,Yoann,Mariama,Dina,Gabriel
  */
 public class Dialog implements IPirates{
     
@@ -48,10 +47,12 @@ public class Dialog implements IPirates{
         frame.deplacerPirate(joueurCourant);
     }
 	
+    @Override
     public void caseNormale(){
         frame.caseNormale();
     }
 	
+    @Override
     public void caseBombe(int vie,Joueur joueurCourant){
         String nom = joueurCourant.getNom();
         int pos = joueurCourant.getPositionCourante();
@@ -60,6 +61,7 @@ public class Dialog implements IPirates{
         frame.caseBombe(vie, idJ, nom, pos);
     }
 	
+    @Override
     public void caseQuestion(String reaction,int vie,Joueur joueurCourant){
         String nom = joueurCourant.getNom();
         int pos = joueurCourant.getPositionCourante();
@@ -69,10 +71,12 @@ public class Dialog implements IPirates{
         
     }
 	
+    @Override
     public int poserQuestion(int numCase,String question,String reponse1,String reponse2){
         return frame.poserQuestion(numCase, question, reponse1, reponse2);
     }
 	
+    @Override
     public void annoncerVainqueur(String nomVainqueur){
         frame.annoncerVainqueur(nomVainqueur);
     }

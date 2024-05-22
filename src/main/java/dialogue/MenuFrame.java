@@ -21,13 +21,12 @@ import java.net.URISyntaxException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
-import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import javax.swing.border.LineBorder;
 
 /**
  *
- * @author gabri
+ * @author Gabriel,Julie
  */
 public class MenuFrame extends javax.swing.JFrame {
     
@@ -35,6 +34,8 @@ public class MenuFrame extends javax.swing.JFrame {
 
     /**
      * Creates new form MenuFrame
+     * @throws java.net.URISyntaxException
+     * @throws java.io.IOException
      */
     public MenuFrame() throws URISyntaxException, IOException {
         initComponents();
@@ -171,10 +172,8 @@ public class MenuFrame extends javax.swing.JFrame {
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.setMargin(new java.awt.Insets(20, 20, 20, 20));
         jButton1.setOpaque(true);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
+        jButton1.addActionListener((java.awt.event.ActionEvent evt) -> {
+            jButton1ActionPerformed(evt);
         });
 
         javax.swing.GroupLayout fondEcran1Layout = new javax.swing.GroupLayout(fondEcran1);
@@ -339,9 +338,7 @@ public class MenuFrame extends javax.swing.JFrame {
                 m.initPirateImages(j1, j2, j1Name, j2Name);
                 d.setAdaptateur(boundary);
                 d.setFrame(m);
-            } catch (URISyntaxException ex) {
-                Logger.getLogger(MenuFrame.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (IOException ex) {
+            } catch (URISyntaxException | IOException ex) {
                 Logger.getLogger(MenuFrame.class.getName()).log(Level.SEVERE, null, ex);
             }
             
@@ -370,25 +367,20 @@ public class MenuFrame extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MenuFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MenuFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MenuFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(MenuFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 try {
                     new MenuFrame().setVisible(true);
-                } catch (URISyntaxException ex) {
-                    Logger.getLogger(MenuFrame.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (IOException ex) {
+                } catch (URISyntaxException | IOException ex) {
                     Logger.getLogger(MenuFrame.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }

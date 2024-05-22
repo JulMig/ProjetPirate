@@ -10,7 +10,7 @@ import java.io.IOException;
 
 /**
  *
- * @author Julie Mignotte
+ * @author Julie
  */
 public class Jeton extends javax.swing.JPanel {
 
@@ -59,10 +59,8 @@ public class Jeton extends javax.swing.JPanel {
         
         try{
             image = ImageIO.read(new File(getClass().getResource(path).toURI()));
-        } catch (IOException e){
+        } catch (IOException | java.net.URISyntaxException e){
             e.printStackTrace();
-        } catch (java.net.URISyntaxException e) {
-            e.printStackTrace();  
         }
         this.repaint();
     }

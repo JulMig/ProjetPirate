@@ -8,11 +8,13 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
+import java.net.URISyntaxException;
 import javax.imageio.ImageIO;
 
 /**
  *
- * @author gabri
+ * @author Gabriel
  */
 public class FondEcran extends javax.swing.JPanel {
 
@@ -29,7 +31,7 @@ public class FondEcran extends javax.swing.JPanel {
         try {
                 image = ImageIO.read(new File(getClass().getResource("/Images/fond_ecran_pirate.png").toURI()));
         
-        } catch (Exception e) {
+        } catch (IOException | URISyntaxException e) {
             e.printStackTrace();
         }
     }

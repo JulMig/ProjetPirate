@@ -8,7 +8,6 @@ boundary\BoundaryJeuPirate.class
 entity\De.class
 dialogue\ImagePirate.class
 dialogue\move.class
-dialogue\MenuFrame$6.class
 controller\IVerifierFin.class
 entity\CaseQCM.class
 entity\Plateau.class

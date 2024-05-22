@@ -6,7 +6,6 @@ package dialogue;
 
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -16,7 +15,7 @@ import javax.swing.Timer;
 
 /**
  *
- * @author GBL4455A
+ * @author Louis
  */
 public class AffichageDes extends javax.swing.JPanel {
 
@@ -29,7 +28,6 @@ public class AffichageDes extends javax.swing.JPanel {
     Timer timer;
     int compteur = 0;
     int limite = 20;
-    int currentIndex = 0;
     int nbAAfficherD1 = 0;
     int nbAAfficherD2 = 0;
  

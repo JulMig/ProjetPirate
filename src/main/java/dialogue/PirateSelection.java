@@ -4,27 +4,26 @@
  */
 package dialogue;
 
-import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
+import java.net.URISyntaxException;
 import javax.imageio.ImageIO;
-import javax.swing.SwingUtilities;
-import javax.swing.border.LineBorder;
 
 /**
  *
- * @author gabri
+ * @author Julie,Yoann,Gabriel
  */
 public class PirateSelection extends javax.swing.JPanel {
 
-    boolean is_clicked = false;
     String nom;
 
     /**
      * Creates new form Pirate1
+     * @param imagePath
+     * @param nom
      */
     public PirateSelection(String imagePath, String nom) {
         initComponents();
@@ -46,7 +45,7 @@ public class PirateSelection extends javax.swing.JPanel {
     private void loadImage(String imagePath) {
         try {
             image = ImageIO.read(new File(getClass().getResource(imagePath).toURI()));
-        } catch (Exception e) {
+        } catch (IOException | URISyntaxException e) {
             e.printStackTrace();
         }
     }

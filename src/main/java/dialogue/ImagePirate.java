@@ -6,14 +6,10 @@ package dialogue;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import java.net.URISyntaxException;
-import javax.imageio.ImageIO;
 
 /**
  *
- *  @author Dina Tamboura 22113075
+ *  @author Julie,Dina,Gabriel
  */
 public class ImagePirate extends javax.swing.JPanel {
 

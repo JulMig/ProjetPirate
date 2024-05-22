@@ -8,11 +8,13 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
+import java.net.URISyntaxException;
 import javax.imageio.ImageIO;
 
 /**
  *
- * @author ASUS
+ * @author Mariama
  */
 public class Case extends javax.swing.JPanel {
 
@@ -32,7 +34,7 @@ public class Case extends javax.swing.JPanel {
             File file = new File(getClass().getResource(path).toURI());
             image = ImageIO.read(file);
             repaint();
-        } catch (Exception e) {
+        } catch (IOException | URISyntaxException e) {
             e.printStackTrace();
         }
     }
