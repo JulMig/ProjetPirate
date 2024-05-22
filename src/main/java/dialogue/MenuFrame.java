@@ -232,8 +232,18 @@ public class MenuFrame extends javax.swing.JFrame {
     
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        this.setVisible(false);
-        lancerJeu("","",null,null);
+        if (tableau[0] != null && tableau[1] != null && tableau[0] != tableau[1]){
+            BufferedImage j1Image;
+            BufferedImage j2Image;
+            String j1Nom;
+            String j2Nom;
+            
+            
+            
+            this.setVisible(false);
+            lancerJeu("","",null,null);
+        
+        }
         
        
     }//GEN-LAST:event_jButton1ActionPerformed
