@@ -6,7 +6,7 @@ public class CaseBombe extends CaseNormal{
 
     public CaseBombe() {
         Random random = new Random();
-        degat = random.nextInt(1, 5);
+        degat = random.nextInt(1, 2);
     }
 
     public int getDegat() {

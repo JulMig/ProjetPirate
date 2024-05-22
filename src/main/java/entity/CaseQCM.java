@@ -20,7 +20,7 @@ public class CaseQCM extends CaseNormal{
             }
             case 1 : {
                 question = "Vous voyez un nid de perroquet non surveillé ?";
-                choix[0] = new Choix("Faire cuire un oeuf","On dirait bien que les parents on tout vu...",-2);
+                choix[0] = new Choix("Faire cuire un oeuf","On dirait bien que les parents ont tout vu...",-2);
                 choix[1] = new Choix("Passer son chemin","Sage décision",0);
                 break;
             }

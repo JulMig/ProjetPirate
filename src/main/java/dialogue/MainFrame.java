@@ -1162,7 +1162,7 @@ public class MainFrame extends javax.swing.JFrame{
         int res = val1 + val2;
         jButton1.setEnabled(false);
         timer = new Timer(3000, (ActionEvent e) -> {
-                    historique.append("Résultat : "+res+"\n");
+                    historique.append("Faites "+res+" pas en avant.\n");
                     affichageDes1.setVisible(false);
                     timer.stop();
         });
@@ -1196,7 +1196,7 @@ public class MainFrame extends javax.swing.JFrame{
         cases[pos-1].loadImage("/Images/bombe.png");
         
         historique.append("BOUM ! vous êtes tombé sur une bombe...\n");
-        historique.append("Joueur "+nom+" a actuellement "+vie+" points de vie.\n");
+        historique.append(nom+" a actuellement "+vie+" points de vie.\n");
         if(joueurCourant==1){
             try {
                 vieJ1.setVie(vie);
@@ -1224,7 +1224,7 @@ public class MainFrame extends javax.swing.JFrame{
         cases[pos-1].loadImage("/Images/sage_question.png");
         
         historique.append(reaction+"\n");
-         historique.append("Joueur "+nom+" a actuellement "+vie+" points de vie.\n");
+         historique.append(nom+" a actuellement "+vie+" points de vie.\n");
         
         
         if(joueurCourant==1){
@@ -1263,7 +1263,7 @@ public class MainFrame extends javax.swing.JFrame{
     }
 
     public void annoncerVainqueur(String nomVainqueur) {
-        int reponse = JOptionPane.showConfirmDialog(this, "La partie est fini le vainquer est "+nomVainqueur,"Finde la partie",JOptionPane.DEFAULT_OPTION,JOptionPane.INFORMATION_MESSAGE,null);
+        int reponse = JOptionPane.showConfirmDialog(this, nomVainqueur+" à vaincu son adversaire ! Bravo au nouveau capitaine !","Fin de la partie",JOptionPane.DEFAULT_OPTION,JOptionPane.INFORMATION_MESSAGE,null);
         
         SwingUtilities.invokeLater(() -> {
             try {
