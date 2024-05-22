@@ -4,6 +4,7 @@ dialogue\MainFrame.class
 controller\ControlLancerPartie.class
 dialogue\MainFrame$2.class
 dialogue\MainFrame$6.class
+dialogue\ImagePiratePanel.class
 boundary\BoundaryJeuPirate.class
 entity\De.class
 dialogue\move.class
@@ -43,7 +44,6 @@ dialogue\FondEcran.class
 dialogue\move$3.class
 controller\ControlDeplacer.class
 entity\TypeCase.class
-boundary\ImagePiratePanel.class
 controller\ControlVerifierFin.class
 entity\CaseBombe.class
 boundary\IBoundary.class

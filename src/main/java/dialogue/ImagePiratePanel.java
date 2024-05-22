@@ -1,4 +1,4 @@
-package boundary;
+package dialogue;
 
 /**
  *
@@ -15,19 +15,9 @@ import java.net.URISyntaxException;
 public class ImagePiratePanel extends JPanel {
     private BufferedImage image;
 
-    public ImagePiratePanel() {
+    public ImagePiratePanel(String path) {
         // Initialiser le panel possiblement avec une image par défaut
-        try {
-        java.net.URI url = getClass().getResource("/Images/pirate.jpg").toURI();
-        if (url != null) {
-            var file = new File(url);
-            this.image = ImageIO.read(file);
-        } else {
-            System.out.println("Erreur : le chemin de l'image est introuvable.");
-        }
-    } catch (URISyntaxException | IOException e) {
-        System.out.println("Erreur lors du chargement de l'image initiale: " + e.getMessage());
-    }
+        setImage(path);
     }
      @Override
     protected void paintComponent(Graphics g) {
@@ -38,14 +28,12 @@ public class ImagePiratePanel extends JPanel {
             g.drawImage(this.image, 0, 0, width, height, null);
         }
     }
-    public void setImage(File file) {
-        try {
-            BufferedImage newImage = ImageIO.read(file);
-            this.image = newImage;
-            repaint();
-        } catch (IOException e) {
-            System.out.println("Erreur lors du chargement de la nouvelle image: " + e.getMessage());
-        }
+    public void setImage(String path) {
+       try {
+        image = ImageIO.read(new File(getClass().getResource(path).toURI()));
+    } catch (URISyntaxException | IOException e) {
+        System.out.println("Erreur lors du chargement de l'image initiale: " + e.getMessage());
+    }
     }
 
    
