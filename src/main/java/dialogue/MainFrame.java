@@ -33,9 +33,11 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
     /**
      * Creates new form main
      */
+    MenuFrame menu;
     public MainFrame() {
         initComponents();
         initJetons();
+        
         affichageDes1.setVisible(false);
         cases[0] = case1;
         cases[1] = case2;
@@ -77,6 +79,10 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
         jeton2.setLocation(50, 50);
     }
 
+    public void setMenuFrame(MenuFrame m){
+        this.menu = m;
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -1228,5 +1234,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
     @Override
     public void annoncerVainqueur(String nomVainqueur) {
         int reponse = JOptionPane.showConfirmDialog(this, "La partie est fini le vainquer est "+nomVainqueur,"Finde la partie",JOptionPane.DEFAULT_OPTION,JOptionPane.INFORMATION_MESSAGE,null);
+        menu.setVisible(true);
+        this.dispose();
     }
 }

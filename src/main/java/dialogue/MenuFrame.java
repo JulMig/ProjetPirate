@@ -323,6 +323,7 @@ public class MenuFrame extends javax.swing.JFrame {
             m.setAdaptateur(boundary);
             System.out.println(m);
             boundary.setiPirates(m);
+            m.setMenuFrame(this);
             
             ControlJeuPirate controlJeuPirate = new ControlJeuPirate(controlActiverCase, controlDeplacer, controlLancerPartie, controlVerifierFin, boundary);
             System.out.println(controlJeuPirate);
