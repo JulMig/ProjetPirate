@@ -92,12 +92,12 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLayeredPane2 = new javax.swing.JLayeredPane();
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         historique = new javax.swing.JTextArea();
         imagePirate3 = new dialogue.ImagePirate();
-        fondEcran1 = new dialogue.FondEcran();
         jPanel2 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -150,14 +150,19 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
         case28 = new dialogue.Case();
         case29 = new dialogue.Case();
         case30 = new dialogue.Case();
+        fondEcran1 = new dialogue.FondEcran();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jLayeredPane2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setOpaque(false);
+
+        jButton1.setBackground(new java.awt.Color(242, 222, 193));
         jButton1.setFont(new java.awt.Font("Segoe Script", 0, 12)); // NOI18N
         jButton1.setText("Lancer dés");
         jButton1.setEnabled(false);
@@ -168,6 +173,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
         });
 
         historique.setEditable(false);
+        historique.setBackground(new java.awt.Color(242, 222, 193));
         historique.setColumns(20);
         historique.setFont(new java.awt.Font("Segoe Script", 0, 12)); // NOI18N
         historique.setRows(5);
@@ -189,13 +195,13 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addGap(14, 14, 14)
                 .addComponent(jButton1)
-                .addGap(36, 36, 36)
+                .addGap(26, 26, 26)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 648, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(imagePirate3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(18, 18, 18))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -213,18 +219,10 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout fondEcran1Layout = new javax.swing.GroupLayout(fondEcran1);
-        fondEcran1.setLayout(fondEcran1Layout);
-        fondEcran1Layout.setHorizontalGroup(
-            fondEcran1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 340, Short.MAX_VALUE)
-        );
-        fondEcran1Layout.setVerticalGroup(
-            fondEcran1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 213, Short.MAX_VALUE)
-        );
+        jLayeredPane2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel2.setOpaque(false);
 
         jPanel4.setBackground(new java.awt.Color(153, 153, 255));
 
@@ -325,7 +323,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addComponent(imagePirate2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())))
@@ -412,8 +410,9 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
         jLayeredPane1.add(jeton1);
         jeton1.setBounds(325, 248, 40, 40);
 
+        Plateauihm.setOpaque(false);
         Plateauihm.setPreferredSize(new java.awt.Dimension(500, 582));
-        Plateauihm.setLayout(null);
+        Plateauihm.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         case1.setPreferredSize(new java.awt.Dimension(90, 90));
 
@@ -428,8 +427,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        Plateauihm.add(case1);
-        case1.setBounds(14, 6, 90, 90);
+        Plateauihm.add(case1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, -1));
 
         case2.setPreferredSize(new java.awt.Dimension(90, 90));
 
@@ -444,8 +442,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        Plateauihm.add(case2);
-        case2.setBounds(116, 6, 90, 90);
+        Plateauihm.add(case2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, -1, -1));
 
         case3.setPreferredSize(new java.awt.Dimension(90, 90));
 
@@ -460,8 +457,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        Plateauihm.add(case3);
-        case3.setBounds(218, 6, 90, 90);
+        Plateauihm.add(case3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 0, -1, -1));
 
         case4.setPreferredSize(new java.awt.Dimension(90, 90));
 
@@ -476,8 +472,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        Plateauihm.add(case4);
-        case4.setBounds(320, 6, 90, 90);
+        Plateauihm.add(case4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, -1, -1));
 
         case5.setPreferredSize(new java.awt.Dimension(90, 90));
 
@@ -492,8 +487,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        Plateauihm.add(case5);
-        case5.setBounds(428, 6, 90, 90);
+        Plateauihm.add(case5, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 0, -1, -1));
 
         case6.setPreferredSize(new java.awt.Dimension(90, 90));
 
@@ -508,8 +502,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        Plateauihm.add(case6);
-        case6.setBounds(536, 6, 90, 90);
+        Plateauihm.add(case6, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, -1, -1));
 
         case7.setPreferredSize(new java.awt.Dimension(90, 90));
 
@@ -524,8 +517,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        Plateauihm.add(case7);
-        case7.setBounds(14, 102, 90, 90);
+        Plateauihm.add(case7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
 
         case8.setPreferredSize(new java.awt.Dimension(90, 90));
 
@@ -540,8 +532,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        Plateauihm.add(case8);
-        case8.setBounds(116, 102, 90, 90);
+        Plateauihm.add(case8, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, -1, -1));
 
         case9.setPreferredSize(new java.awt.Dimension(90, 90));
 
@@ -556,8 +547,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        Plateauihm.add(case9);
-        case9.setBounds(218, 102, 90, 90);
+        Plateauihm.add(case9, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 100, -1, -1));
 
         case10.setPreferredSize(new java.awt.Dimension(90, 90));
 
@@ -572,8 +562,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        Plateauihm.add(case10);
-        case10.setBounds(320, 102, 90, 90);
+        Plateauihm.add(case10, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, -1, -1));
 
         case11.setPreferredSize(new java.awt.Dimension(90, 90));
 
@@ -588,8 +577,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        Plateauihm.add(case11);
-        case11.setBounds(428, 102, 90, 90);
+        Plateauihm.add(case11, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 100, -1, -1));
 
         case12.setPreferredSize(new java.awt.Dimension(90, 90));
 
@@ -604,8 +592,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        Plateauihm.add(case12);
-        case12.setBounds(536, 102, 90, 90);
+        Plateauihm.add(case12, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 100, -1, -1));
 
         case13.setPreferredSize(new java.awt.Dimension(90, 90));
 
@@ -620,8 +607,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        Plateauihm.add(case13);
-        case13.setBounds(14, 198, 90, 90);
+        Plateauihm.add(case13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
 
         case14.setPreferredSize(new java.awt.Dimension(90, 90));
 
@@ -636,8 +622,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        Plateauihm.add(case14);
-        case14.setBounds(116, 198, 90, 90);
+        Plateauihm.add(case14, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, -1, -1));
 
         case15.setPreferredSize(new java.awt.Dimension(90, 90));
 
@@ -652,8 +637,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        Plateauihm.add(case15);
-        case15.setBounds(218, 198, 90, 90);
+        Plateauihm.add(case15, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 198, -1, -1));
 
         case16.setPreferredSize(new java.awt.Dimension(90, 90));
 
@@ -668,8 +652,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        Plateauihm.add(case16);
-        case16.setBounds(320, 198, 90, 90);
+        Plateauihm.add(case16, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 198, -1, -1));
 
         case17.setPreferredSize(new java.awt.Dimension(90, 90));
 
@@ -684,8 +667,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        Plateauihm.add(case17);
-        case17.setBounds(428, 198, 90, 90);
+        Plateauihm.add(case17, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 200, -1, -1));
 
         case18.setPreferredSize(new java.awt.Dimension(90, 90));
 
@@ -700,8 +682,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        Plateauihm.add(case18);
-        case18.setBounds(536, 198, 90, 90);
+        Plateauihm.add(case18, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 200, -1, -1));
 
         case19.setPreferredSize(new java.awt.Dimension(90, 90));
 
@@ -716,8 +697,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        Plateauihm.add(case19);
-        case19.setBounds(14, 294, 90, 90);
+        Plateauihm.add(case19, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, -1, -1));
 
         case20.setPreferredSize(new java.awt.Dimension(90, 90));
 
@@ -732,8 +712,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        Plateauihm.add(case20);
-        case20.setBounds(116, 294, 90, 90);
+        Plateauihm.add(case20, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 300, -1, -1));
 
         case21.setPreferredSize(new java.awt.Dimension(90, 90));
 
@@ -748,8 +727,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        Plateauihm.add(case21);
-        case21.setBounds(218, 294, 90, 90);
+        Plateauihm.add(case21, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 300, -1, -1));
 
         case22.setPreferredSize(new java.awt.Dimension(90, 90));
 
@@ -764,8 +742,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        Plateauihm.add(case22);
-        case22.setBounds(320, 294, 90, 90);
+        Plateauihm.add(case22, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 300, -1, -1));
 
         case23.setPreferredSize(new java.awt.Dimension(90, 90));
 
@@ -780,8 +757,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        Plateauihm.add(case23);
-        case23.setBounds(428, 294, 90, 90);
+        Plateauihm.add(case23, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 300, -1, -1));
 
         case24.setPreferredSize(new java.awt.Dimension(90, 90));
 
@@ -796,8 +772,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        Plateauihm.add(case24);
-        case24.setBounds(536, 294, 90, 90);
+        Plateauihm.add(case24, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 300, -1, -1));
 
         case25.setPreferredSize(new java.awt.Dimension(90, 90));
 
@@ -812,8 +787,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        Plateauihm.add(case25);
-        case25.setBounds(14, 390, 90, 90);
+        Plateauihm.add(case25, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, -1, -1));
 
         case26.setPreferredSize(new java.awt.Dimension(90, 90));
 
@@ -828,8 +802,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        Plateauihm.add(case26);
-        case26.setBounds(116, 390, 90, 90);
+        Plateauihm.add(case26, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 400, -1, -1));
 
         case27.setPreferredSize(new java.awt.Dimension(90, 90));
 
@@ -844,8 +817,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        Plateauihm.add(case27);
-        case27.setBounds(218, 390, 90, 90);
+        Plateauihm.add(case27, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 400, -1, -1));
 
         case28.setPreferredSize(new java.awt.Dimension(90, 90));
 
@@ -860,8 +832,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        Plateauihm.add(case28);
-        case28.setBounds(320, 390, 90, 90);
+        Plateauihm.add(case28, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 400, -1, -1));
 
         case29.setPreferredSize(new java.awt.Dimension(90, 90));
 
@@ -876,8 +847,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        Plateauihm.add(case29);
-        case29.setBounds(428, 390, 90, 90);
+        Plateauihm.add(case29, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 400, -1, -1));
 
         case30.setPreferredSize(new java.awt.Dimension(90, 90));
 
@@ -892,8 +862,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        Plateauihm.add(case30);
-        case30.setBounds(536, 390, 90, 90);
+        Plateauihm.add(case30, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 400, -1, -1));
 
         jLayeredPane1.add(Plateauihm);
         Plateauihm.setBounds(6, 6, 652, 486);
@@ -906,10 +875,9 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
                 .addContainerGap()
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLayeredPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 635, Short.MAX_VALUE)
+                .addComponent(jLayeredPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 639, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -921,6 +889,21 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 501, Short.MAX_VALUE))
                 .addContainerGap())
         );
+
+        jLayeredPane2.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, -1, -1));
+
+        javax.swing.GroupLayout fondEcran1Layout = new javax.swing.GroupLayout(fondEcran1);
+        fondEcran1.setLayout(fondEcran1Layout);
+        fondEcran1Layout.setHorizontalGroup(
+            fondEcran1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 940, Short.MAX_VALUE)
+        );
+        fondEcran1Layout.setVerticalGroup(
+            fondEcran1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 650, Short.MAX_VALUE)
+        );
+
+        jLayeredPane2.add(fondEcran1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-4, -1, 940, 650));
 
         jMenu1.setText("Quit");
         jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -944,32 +927,14 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(177, Short.MAX_VALUE)
-                    .addComponent(fondEcran1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(418, Short.MAX_VALUE)))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(164, Short.MAX_VALUE)
-                    .addComponent(fondEcran1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(278, Short.MAX_VALUE)))
+            .addComponent(jLayeredPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 655, Short.MAX_VALUE)
         );
 
         pack();
@@ -1172,6 +1137,7 @@ public class MainFrame extends javax.swing.JFrame implements IPirates{
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLayeredPane jLayeredPane1;
+    private javax.swing.JLayeredPane jLayeredPane2;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
