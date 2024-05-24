@@ -1,39 +1,39 @@
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\test\Test_Limite_Joueur.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\test\Test_Question_Qcm.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\entity\CaseQCM.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\controller\ControlLancerPartie.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\entity\Plateau.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\controller\ControlDeplacer.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\dialogue\ImagePirate.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\controller\ControlJeuPirate.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\dialogue\PirateSelection.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\entity\TypeCase.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\entity\CaseNormal.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\test\Test_deplacement_Joueur.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\controller\ControlActiverCase.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\dialogue\AffichageDes.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\controller\IVerifierFin.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\boundary\IBoundary.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\dialogue\move.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\dialogue\Jeton.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\entity\Jeu.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\entity\Choix.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\dialogue\FondEcran.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\entity\De.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\test\Test_Reduction_Vie_Bombe.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\controller\ILancerDe.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\controller\ControlVerifierFin.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\dialogue\Case.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\controller\IActiverCase.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\boundary\AdaptateurNoyauFonctionnel.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\boundary\IPirates.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\test\TestUnitaires.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\dialogue\Dialog.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\dialogue\MainFrame.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\boundary\BoundaryJeuPirate.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\entity\Joueur.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\dialogue\BarreDeVie.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\boundary\INoyauFonctionnel.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\controller\IDeplacerPirate.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\entity\CaseBombe.java
-C:\Users\julie\OneDrive\Bureau\Projet IlU\projet pirate reclone\ProjetPirate\src\main\java\dialogue\MenuFrame.java
+C:\ILU1\ProjetPirate\src\main\java\controller\ControlJeuPirate.java
+C:\ILU1\ProjetPirate\src\main\java\controller\IDeplacerPirate.java
+C:\ILU1\ProjetPirate\src\main\java\entity\CaseQCM.java
+C:\ILU1\ProjetPirate\src\main\java\controller\ControlActiverCase.java
+C:\ILU1\ProjetPirate\src\main\java\controller\IVerifierFin.java
+C:\ILU1\ProjetPirate\src\main\java\dialogue\move.java
+C:\ILU1\ProjetPirate\src\main\java\entity\Plateau.java
+C:\ILU1\ProjetPirate\src\main\java\test\TestUnitaires.java
+C:\ILU1\ProjetPirate\src\main\java\boundary\IPirates.java
+C:\ILU1\ProjetPirate\src\main\java\dialogue\AffichageDes.java
+C:\ILU1\ProjetPirate\src\main\java\boundary\INoyauFonctionnel.java
+C:\ILU1\ProjetPirate\src\main\java\controller\ControlDeplacer.java
+C:\ILU1\ProjetPirate\src\main\java\test\Test_Question_Qcm.java
+C:\ILU1\ProjetPirate\src\main\java\dialogue\ImagePirate.java
+C:\ILU1\ProjetPirate\src\main\java\test\Test_Limite_Joueur.java
+C:\ILU1\ProjetPirate\src\main\java\controller\IActiverCase.java
+C:\ILU1\ProjetPirate\src\main\java\dialogue\Case.java
+C:\ILU1\ProjetPirate\src\main\java\entity\Choix.java
+C:\ILU1\ProjetPirate\src\main\java\boundary\BoundaryJeuPirate.java
+C:\ILU1\ProjetPirate\src\main\java\dialogue\FondEcran.java
+C:\ILU1\ProjetPirate\src\main\java\dialogue\Jeton.java
+C:\ILU1\ProjetPirate\src\main\java\entity\Jeu.java
+C:\ILU1\ProjetPirate\src\main\java\entity\Joueur.java
+C:\ILU1\ProjetPirate\src\main\java\boundary\IBoundary.java
+C:\ILU1\ProjetPirate\src\main\java\dialogue\Dialog.java
+C:\ILU1\ProjetPirate\src\main\java\controller\ControlLancerPartie.java
+C:\ILU1\ProjetPirate\src\main\java\controller\ControlVerifierFin.java
+C:\ILU1\ProjetPirate\src\main\java\dialogue\MainFrame.java
+C:\ILU1\ProjetPirate\src\main\java\entity\CaseNormal.java
+C:\ILU1\ProjetPirate\src\main\java\entity\CaseBombe.java
+C:\ILU1\ProjetPirate\src\main\java\test\Test_deplacement_Joueur.java
+C:\ILU1\ProjetPirate\src\main\java\test\Test_Reduction_Vie_Bombe.java
+C:\ILU1\ProjetPirate\src\main\java\boundary\AdaptateurNoyauFonctionnel.java
+C:\ILU1\ProjetPirate\src\main\java\controller\ILancerDe.java
+C:\ILU1\ProjetPirate\src\main\java\dialogue\MenuFrame.java
+C:\ILU1\ProjetPirate\src\main\java\dialogue\BarreDeVie.java
+C:\ILU1\ProjetPirate\src\main\java\entity\De.java
+C:\ILU1\ProjetPirate\src\main\java\dialogue\PirateSelection.java
+C:\ILU1\ProjetPirate\src\main\java\entity\TypeCase.java
